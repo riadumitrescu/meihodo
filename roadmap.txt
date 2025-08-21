@@ -1,0 +1,145 @@
+# Meihodo Website Development Roadmap
+
+## Phase 1: Foundation (COMPLETED)
+**Date**: Initial setup
+**Status**: ✅ Complete
+
+### What was changed:
+- Created directory structure `/assets/css/`
+- Built complete CSS foundation with contemporary wabi-sabi design system
+- Implemented static HTML homepage with all required sections
+- Added responsive design patterns and accessibility features
+
+### Why it was changed:
+- Establish modern, minimal aesthetic matching ryokan-meets-dojo calm
+- Ensure proper semantic HTML structure and accessibility
+- Create scalable CSS architecture with design tokens
+- Meet strict requirements: HTML+CSS only, no JavaScript, no frameworks
+
+### What part of the app it affects:
+- **Core Design System**: Typography (Noto Serif JP for headlines, Noto Sans JP for body), color palette, spacing, radius tokens
+- **Layout System**: Container, grid, responsive breakpoints
+- **Component System**: Cards, buttons, navigation, hero sections
+- **Page Structure**: Header, hero, experience, accommodations, restaurant, photography, access, affiliated services, footer
+
+## Phase 2: Enhanced Design System (COMPLETED)
+**Date**: Redesign iteration
+**Status**: ✅ Complete
+
+### What was changed:
+- **Enhanced CSS Architecture**: Refined color palette with new variables (--accent-light, --shadow, --shadow-hover)
+- **Typography Refinement**: Implemented fluid typography with clamp(), improved letter-spacing and line-height
+- **Advanced Animations**: Added fadeInUp keyframe animation, slideRight for buttons, and prefers-reduced-motion support
+- **Hero Video Section**: Full-width video background with overlay and centered content
+- **Improved Components**: Card hover effects with lift and shadow, animated button arrows, status badges
+- **Enhanced Layout**: Split-section layouts, sticky header with backdrop-filter, improved spacing system
+- **Responsive Design**: Mobile-first approach with improved breakpoints and layout adaptations
+
+### Why it was changed:
+- Achieve serene Japanese elegance × modern minimalism aesthetic
+- Implement cinematic visuals with video hero background
+- Add tasteful CSS-only animations for enhanced user experience
+- Improve visual hierarchy and content flow
+- Ensure accessibility with motion preferences respect
+
+### What part of the app it affects:
+- **Design Tokens**: Enhanced color system, transition variables, shadow system
+- **Hero Section**: Full-screen video background with overlay and centered content
+- **Animations**: Fade-in effects for sections, button hover animations, card interactions
+- **Layout System**: Split-section grids, improved responsive behavior
+- **Components**: Enhanced cards, animated buttons, status badges, sticky header
+- **Typography**: Fluid responsive text sizing, improved contrast and spacing
+
+## Phase 2.1: Navigation Update (COMPLETED)
+**Date**: Navigation refinement
+**Status**: ✅ Complete
+
+### What was changed:
+- **Updated navigation structure**: Streamlined to 5 key links in exact order
+- **Link targets updated**: HOME, Languages, Accommodations, Experience, Instagram
+- **External link styling**: Added ↗ symbol for Instagram (new tab)
+- **Typography refinement**: Uppercase nav text with letter-spacing
+- **Active state enhancement**: Improved underline animation with ::before pseudo-element
+
+### Why it was changed:
+- Simplify navigation to essential pages only
+- Add direct Instagram link for social media engagement
+- Improve visual hierarchy and user experience
+- Maintain serene aesthetic while enhancing functionality
+
+### What part of the app it affects:
+- **Global Header**: Navigation structure and styling
+- **Link Behavior**: External links open in new tabs with indicators
+- **Active States**: Enhanced visual feedback for current page
+- **Typography**: Consistent uppercase treatment for navigation
+
+## Phase 3: Complete Site Architecture (COMPLETED)
+**Date**: Full site build
+**Status**: ✅ Complete
+
+### What was changed:
+- **Complete Site Structure**: Built 30+ pages with proper navigation and linking
+- **Languages Page**: Language selection with placeholder links for future translations
+- **Accommodations System**: Index page + 6 detailed accommodation pages (Seiseisya, Geihinkan, Kourokan, Bunshinkan, Edokan, Hinokinoma)
+- **Experiences System**: Index page + 11 experience detail pages (Samurai, Kyudo, Karate, Kendo, Iaido, Taiko, Chanoyu, Bonseki, Ikebana, Zazen, Takigyo)
+- **Photography Section**: Index + 4 subpages (Pricing, Services, Terms, Gallery)
+- **Support Pages**: Restaurant, Access, Contact with functional form, Legal compliance page
+- **Enhanced CSS**: Added comprehensive styles for all page types (forms, tables, detail pages, galleries)
+
+### Why it was changed:
+- Create complete user journey from homepage to booking
+- Provide detailed information for each accommodation and experience
+- Establish proper legal compliance and contact mechanisms
+- Enable multi-language planning with placeholder structure
+- Support photography services as additional revenue stream
+
+### What part of the app it affects:
+- **Site Architecture**: Complete 30+ page structure with proper internal linking
+- **Navigation System**: All nav links lead to real pages with correct active states
+- **Content Management**: Detailed page templates for accommodations and experiences
+- **User Experience**: Complete booking funnel from discovery to contact
+- **Legal Compliance**: Proper terms and legal information pages
+- **Forms**: Functional contact form with accessibility features
+- **SEO**: Proper page titles, meta descriptions, and semantic structure
+
+## Phase 3: Content Integration (PENDING)
+**Status**: 🔄 Awaiting real assets
+
+### Planned Changes:
+- Replace gray SVG mocks with real images and video
+- Add Japanese translations for marked sections
+- Update restaurant section when opening
+- Add real URLs for affiliate services
+- Implement hero video file when available
+
+### Requirements:
+- Hero video: Full-width ~16:9 ratio with muted autoplay
+- Section teasers: 1200×800 (3:2 ratio)
+- Cards: 600×400 (3:2 ratio)
+- Logos: 200×80 (wide shallow ratio)
+
+## Technical Implementation Notes:
+
+### CSS Architecture:
+- Design tokens in `:root` for maintainability
+- Mobile-first responsive design
+- Focus states for accessibility (AA contrast compliant)
+- Optional elevated variant via body class
+
+### HTML Structure:
+- Semantic markup with proper heading hierarchy
+- All internal links point to future pages
+- Gray SVG mocks preserve exact aspect ratios
+- TODO comments mark areas needing real content
+
+### Performance Considerations:
+- Single CSS file for minimal HTTP requests
+- Inline SVG mocks eliminate external image requests
+- Optimized font loading with preconnect
+- Clean, minimal markup structure
+
+## Future Enhancements:
+- Multi-language support implementation
+- CMS integration for content management
+- Performance optimization for production
+- SEO meta tags and structured data

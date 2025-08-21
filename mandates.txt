@@ -1,0 +1,108 @@
+# Meihodo Website Development Mandates
+
+## Design Philosophy - MANDATORY
+- **Serene Japanese elegance × modern minimalism**: Ryokan × dojo × contemporary resort aesthetic
+- **Cinematic visuals**: Full-width video hero with elegant overlays
+- **Refined calm**: Peaceful, contemplative atmosphere with generous whitespace
+- **Subtle interactions**: Tasteful CSS-only animations with accessibility respect
+- **Clean typography**: Understated dividers, thin lines, fluid responsive text
+- **High-quality craftsmanship**: Every detail serves clarity, speed, or emotional impact
+
+## Technical Constraints - STRICT
+- **HTML + CSS ONLY**: No JavaScript, no frameworks, no exceptions
+- **No external image requests**: Use gray SVG mocks only
+- **Single stylesheet**: `/assets/css/site.css` only
+- **Static files**: `index.html` as entry point
+
+## Typography System - EXACT
+- **Headlines**: Noto Serif JP (700 weight for H1/H2)
+- **Body/UI**: Noto Sans JP (400/600 weights)
+- **Font loading**: Google Fonts via `<link>` tags only
+- **Fallbacks**: Robust system font fallbacks in CSS
+
+## Image System - PRECISE RATIOS
+- **Hero banner**: 1600×700 (≈16:7 aspect ratio)
+- **Section teasers**: 1200×800 (≈3:2 aspect ratio)  
+- **Cards**: 600×400 (3:2 aspect ratio)
+- **Logos/Marks**: 200×80 (wide & shallow)
+- **Responsive scaling**: Maintain aspect ratios with CSS
+- **Object fit**: Use `object-fit: cover` for all images
+
+## Global Header Navigation - EXACT STRUCTURE
+**Left**: MEIHODO logo (text or image)
+**Right**: Navigation links in this exact order:
+1. HOME → /index.html
+2. Languages → /languages/index.html  
+3. Accommodations → /accommodations/index.html
+4. Experience → /experiences/index.html
+5. Instagram → https://www.instagram.com/meihodoliving/ (external, new tab)
+
+**Active state**: Mark active link on each page with accent color and underline
+**External links**: Show ↗ symbol for new tab indicators
+
+## Content Structure - EXACT ORDER
+1. Header (global navigation)
+2. Hero (main value proposition)
+3. Experience (intro section)
+4. Accommodations (teaser + 6-card grid)
+5. Restaurant (teaser, under preparation)
+6. Photography Location (teaser)
+7. Access (teaser)
+8. Affiliated Services (2-card grid)
+9. Footer (contact + legal)
+
+## CSS Architecture - ENHANCED TOKENS
+```css
+:root {
+  --bg: #fefefe;
+  --ink: #1a1a1a;
+  --muted: #6b6b6b;
+  --light-muted: #9a9a9a;
+  --line: #e8e8e8;
+  --accent: #c2a878;
+  --accent-light: #d4bb8e;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --shadow-hover: rgba(0, 0, 0, 0.12);
+  --container: 1200px;
+  --radius: 8px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+```
+
+## Animation System - ACCESSIBILITY FIRST
+- **Fade-in animations**: fadeInUp for sections on load
+- **Button interactions**: Arrow slides right on hover
+- **Card hover effects**: Subtle lift with enhanced shadow
+- **Motion preferences**: prefers-reduced-motion fully respected
+- **Smooth scrolling**: CSS scroll-behavior with fallbacks
+
+## Accessibility - NON-NEGOTIABLE
+- **Proper heading hierarchy**: H1 → H2 → H3 structure
+- **Focus styles**: Visible focus indicators
+- **AA contrast**: Meet WCAG 2.1 AA standards
+- **Semantic markup**: Proper HTML elements
+- **Alt text**: Descriptive for all images
+
+## Responsive Design - BREAKPOINTS
+- **Desktop**: 1200px max container width
+- **Tablet**: 960px breakpoint (cards to single column)
+- **Mobile**: 640px breakpoint (simplified navigation)
+
+## File Management - MANDATORY
+- **Always update roadmap.txt**: Track what changed, why, and impact
+- **Always update mandates.txt**: Capture new "good" or "mandatory" items
+- **Version control**: Never overwrite critical benchmarks
+- **TODO comments**: Mark areas needing real content
+
+## Quality Standards - GOOD
+- **Intentional design**: Every choice serves clarity, speed, or emotional impact
+- **Systems thinking**: Anticipate edge cases and product-level problems
+- **Minimal friction**: Reduce user cognitive load
+- **Delightful interactions**: Subtle hover states and transitions
+- **Strategic approach**: Think like a product owner, not just implementer
+
+## Content Placeholders - TEMPORARY
+- Gray SVG mocks preserve exact layout dimensions
+- TODO comments mark Japanese translation needs
+- Placeholder URLs for future page links
+- "Under preparation" notes for incomplete sections
