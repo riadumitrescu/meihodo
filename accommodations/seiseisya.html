@@ -22,125 +22,161 @@
                 <div class="logo"><a href="/index.html">MEIHODO</a></div>
                 <nav class="nav">
                     <a href="/index.html">HOME</a>
-                    <a href="/languages/index.html">Languages</a>
-                    <a href="/accommodations/index.html" class="active">Accommodations</a>
-                    <a href="/experiences/index.html">Experience</a>
+                    <div class="dropdown">
+                        <span class="dropdown-toggle">Languages</span>
+                        <div class="dropdown-content">
+                            <a href="/ja/index.html" class="lang-link">
+                                <span class="lang-name">日本語</span>
+                                <span class="lang-code">JP</span>
+                            </a>
+                            <a href="/index.html" class="lang-link current">
+                                <span class="lang-name">English</span>
+                                <span class="lang-code">EN</span>
+                            </a>
+                            <a href="/zh-cn/index.html" class="lang-link">
+                                <span class="lang-name">简体中文</span>
+                                <span class="lang-code">CN</span>
+                            </a>
+                            <a href="/zh-tw/index.html" class="lang-link">
+                                <span class="lang-name">繁體中文</span>
+                                <span class="lang-code">TW</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="/accommodations/index.html" class="dropdown-toggle active">Accommodations</a>
+                        <div class="dropdown-content">
+                            <a href="/accommodations/seiseisya.html">Seiseisya</a>
+                            <a href="/accommodations/geihinkan.html">Geihinkan</a>
+                            <a href="/accommodations/kourokan.html">Kourokan</a>
+                            <a href="/accommodations/bunshinkan.html">Bunshinkan</a>
+                            <a href="/accommodations/edokan.html">Edokan</a>
+                            <a href="/accommodations/hinokinoma.html">Hinokinoma</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="/experiences/index.html" class="dropdown-toggle">Experience</a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-section">
+                                <span class="dropdown-header">Samurai</span>
+                                <a href="/experiences/samurai.html">Samurai Experience</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <span class="dropdown-header">Martial Arts</span>
+                                <a href="/experiences/kyudo.html">Kyūdō (Archery)</a>
+                                <a href="/experiences/karate.html">Karate</a>
+                                <a href="/experiences/kendo.html">Kendō</a>
+                                <a href="/experiences/iaido.html">Iaidō</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <span class="dropdown-header">Cultural</span>
+                                <a href="/experiences/taiko.html">Taiko Drumming</a>
+                                <a href="/experiences/chanoyu.html">Tea Ceremony</a>
+                                <a href="/experiences/ikebana.html">Ikebana</a>
+                                <a href="/experiences/bonseki.html">Bonseki</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <span class="dropdown-header">Mind–Body</span>
+                                <a href="/experiences/zazen.html">Zazen</a>
+                                <a href="/experiences/takigyo.html">Takigyō</a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="https://www.instagram.com/meihodoliving/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- Detail Page Content -->
+    <!-- Accommodation Detail Page -->
     <section class="section">
         <div class="container">
             <a href="/accommodations/index.html" class="back-link">← All accommodations</a>
             
-            <div class="page-header fade-in">
-                <h1>Seiseisya</h1>
+            <!-- Hero -->
+            <div class="accommodation-hero fade-in">
+                <div class="accommodation-hero-image">
+                    <div class="ph" aria-label="Seiseisya exterior and garden view">
+                        Seiseisya — Serene Traditional Architecture
+                    </div>
+                </div>
+                <div class="accommodation-hero-content">
+                    <h1>Seiseisya</h1>
+                    <p class="accommodation-deck">A calm, fully private stay with two tatami rooms and a cypress indoor bath.</p>
+                </div>
             </div>
-            
-            <div class="detail-hero fade-in">
-                <img width="1400" height="600" alt="Seiseisya accommodation hero"
-                    src='data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="600" viewBox="0 0 1400 600">
-                        <rect width="100%" height="100%" fill="%23e5e5e5"/>
-                        <text x="50%" y="50%" text-anchor="middle" dy="0.3em" font-family="sans-serif" font-size="18" fill="%23666">Seiseisya Hero Image (21:9)</text>
-                    </svg>' />
+
+            <!-- Room Information -->
+            <div class="accommodation-section fade-in">
+                <h2>Room Information</h2>
+                <div class="room-details">
+                    <div class="detail-item">
+                        <strong>Renting:</strong> The whole house
+                    </div>
+                    <div class="detail-item">
+                        <strong>Max:</strong> 4 people
+                    </div>
+                    <div class="detail-item">
+                        <strong>Layout:</strong> Japanese-style room (living) + Japanese-style room (bedroom)
+                    </div>
+                    <div class="detail-item">
+                        <strong>Beds:</strong> King-size bed + 2 futon sets
+                    </div>
+                </div>
             </div>
-            
-            <div class="detail-content fade-in">
-                <div class="detail-section">
-                    <h2>Room Overview & Layout</h2>
-                    <p>Seiseisya embodies traditional Japanese elegance with carefully curated modern amenities. The space features tatami flooring, sliding shoji screens, and a private garden view that creates a serene atmosphere for contemplation and rest.</p>
-                    <p>The layout includes a main living area with traditional low table, separate sleeping quarters with futon bedding, and a private tea corner for quiet moments throughout your stay.</p>
+
+            <!-- Bath -->
+            <div class="accommodation-section fade-in">
+                <h2>Bath</h2>
+                <p>Indoor cypress bath</p>
+            </div>
+
+            <!-- Check-in / Check-out -->
+            <div class="accommodation-section fade-in">
+                <h2>Check-in / Check-out</h2>
+                <p>15:00 – 11:00</p>
+                <p>Early check-in not available. Late check-out up to 13:00 may be possible (¥10,000/room/hour; subject to availability).</p>
+            </div>
+
+            <!-- Things in the room -->
+            <div class="accommodation-section fade-in">
+                <h2>Things in the Room</h2>
+                <ul class="amenities-list">
+                    <li>Air conditioning</li>
+                    <li>Refrigerator</li>
+                    <li>Washlet</li>
+                    <li>Dyson hair dryer</li>
+                    <li>Free Wi-Fi</li>
+                    <li>Water server</li>
+                    <li>Coffee</li>
+                    <li>Kettle</li>
+                    <li>Umbrella</li>
+                    <li>Indoor footwear</li>
+                </ul>
+            </div>
+
+            <!-- Amenities -->
+            <div class="accommodation-section fade-in">
+                <h2>Amenities</h2>
+                <p><strong>Standard:</strong> Shampoo, conditioner, body soap (ALLNA ORGANIC), toothbrush, razor</p>
+                <p><strong>Available on request:</strong> Hairbrush, hair iron, disposable slippers, pajamas</p>
+            </div>
+
+            <!-- Gallery -->
+            <div class="accommodation-section fade-in">
+                <h2>Gallery</h2>
+                <div class="accommodation-gallery">
+                    <div class="ph" style="aspect-ratio: 3/2; background: #e5e5e5; border-radius: 8px;" aria-label="Seiseisya tatami living room"></div>
+                    <div class="ph" style="aspect-ratio: 3/2; background: #e5e5e5; border-radius: 8px;" aria-label="Seiseisya cypress bath"></div>
+                    <div class="ph" style="aspect-ratio: 3/2; background: #e5e5e5; border-radius: 8px;" aria-label="Seiseisya bedroom area"></div>
                 </div>
-                
-                <div class="detail-section">
-                    <h2>Bath</h2>
-                    <p>Private hinoki cypress bath with mountain spring water, offering a traditional Japanese bathing experience. The bathroom also includes modern shower facilities and premium organic amenities.</p>
-                    <p>Evening bath hours: 6:00 PM - 10:00 PM<br>
-                    Morning bath hours: 6:00 AM - 9:00 AM</p>
-                </div>
-                
-                <div class="detail-section">
-                    <h2>Check-in / Check-out</h2>
-                    <p><strong>Check-in:</strong> 3:00 PM - 6:00 PM<br>
-                    <strong>Check-out:</strong> 10:00 AM</p>
-                    <p>Late check-in available upon request. Early check-out arrangements can be made at the front desk.</p>
-                </div>
-                
-                <div class="detail-section">
-                    <h2>Facilities</h2>
-                    <ul>
-                        <li>Private garden terrace</li>
-                        <li>Traditional tea ceremony corner</li>
-                        <li>Climate control</li>
-                        <li>Mini refrigerator</li>
-                        <li>Safe deposit box</li>
-                        <li>Complimentary Wi-Fi</li>
-                    </ul>
-                </div>
-                
-                <div class="detail-section">
-                    <h2>Amenities</h2>
-                    <ul>
-                        <li>Organic bath products</li>
-                        <li>Traditional yukata and slippers</li>
-                        <li>Premium tea selection</li>
-                        <li>Fresh towels and linens</li>
-                        <li>Hair dryer and basic toiletries</li>
-                        <li>Meditation cushions</li>
-                    </ul>
-                </div>
-                
-                <div class="detail-section">
-                    <h2>Notes / Policies</h2>
-                    <ul>
-                        <li>Quiet hours: 9:00 PM - 7:00 AM</li>
-                        <li>No smoking throughout the property</li>
-                        <li>Shoes to be removed at entrance</li>
-                        <li>Traditional etiquette appreciated</li>
-                        <li>Pets not permitted</li>
-                        <li>Maximum occupancy: 2 guests</li>
-                    </ul>
-                </div>
-                
-                <div class="detail-gallery">
-                    <img width="400" height="267" alt="Seiseisya interior view 1"
-                        src='data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="267" viewBox="0 0 400 267">
-                            <rect width="100%" height="100%" fill="%23e5e5e5"/>
-                            <text x="50%" y="50%" text-anchor="middle" dy="0.3em" font-family="sans-serif" font-size="14" fill="%23666">Interior 1 (3:2)</text>
-                        </svg>' />
-                    
-                    <img width="400" height="267" alt="Seiseisya interior view 2"
-                        src='data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="267" viewBox="0 0 400 267">
-                            <rect width="100%" height="100%" fill="%23e5e5e5"/>
-                            <text x="50%" y="50%" text-anchor="middle" dy="0.3em" font-family="sans-serif" font-size="14" fill="%23666">Interior 2 (3:2)</text>
-                        </svg>' />
-                    
-                    <img width="400" height="267" alt="Seiseisya bath area"
-                        src='data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="267" viewBox="0 0 400 267">
-                            <rect width="100%" height="100%" fill="%23e5e5e5"/>
-                            <text x="50%" y="50%" text-anchor="middle" dy="0.3em" font-family="sans-serif" font-size="14" fill="%23666">Bath Area (3:2)</text>
-                        </svg>' />
-                    
-                    <img width="400" height="267" alt="Seiseisya garden view"
-                        src='data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="267" viewBox="0 0 400 267">
-                            <rect width="100%" height="100%" fill="%23e5e5e5"/>
-                            <text x="50%" y="50%" text-anchor="middle" dy="0.3em" font-family="sans-serif" font-size="14" fill="%23666">Garden View (3:2)</text>
-                        </svg>' />
-                </div>
-                
-                <div class="detail-cta">
-                    <h3>Inquiry about this room</h3>
-                    <p>Contact us to check availability and make a reservation for Seiseisya.</p>
-                    <a href="/contact/index.html" class="btn btn--primary">Contact us</a>
-                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="accommodation-cta fade-in">
+                <h3>Inquiry about this room</h3>
+                <p>Contact us to check availability and make a reservation for Seiseisya.</p>
+                <a href="/contact/index.html" class="btn btn--primary">Contact us</a>
             </div>
         </div>
     </section>

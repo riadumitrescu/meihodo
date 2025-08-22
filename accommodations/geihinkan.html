@@ -22,125 +22,164 @@
                 <div class="logo"><a href="/index.html">MEIHODO</a></div>
                 <nav class="nav">
                     <a href="/index.html">HOME</a>
-                    <a href="/languages/index.html">Languages</a>
-                    <a href="/accommodations/index.html" class="active">Accommodations</a>
-                    <a href="/experiences/index.html">Experience</a>
+                    <div class="dropdown">
+                        <span class="dropdown-toggle">Languages</span>
+                        <div class="dropdown-content">
+                            <a href="/ja/index.html" class="lang-link">
+                                <span class="lang-name">日本語</span>
+                                <span class="lang-code">JP</span>
+                            </a>
+                            <a href="/index.html" class="lang-link current">
+                                <span class="lang-name">English</span>
+                                <span class="lang-code">EN</span>
+                            </a>
+                            <a href="/zh-cn/index.html" class="lang-link">
+                                <span class="lang-name">简体中文</span>
+                                <span class="lang-code">CN</span>
+                            </a>
+                            <a href="/zh-tw/index.html" class="lang-link">
+                                <span class="lang-name">繁體中文</span>
+                                <span class="lang-code">TW</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="/accommodations/index.html" class="dropdown-toggle active">Accommodations</a>
+                        <div class="dropdown-content">
+                            <a href="/accommodations/seiseisya.html">Seiseisya</a>
+                            <a href="/accommodations/geihinkan.html">Geihinkan</a>
+                            <a href="/accommodations/kourokan.html">Kourokan</a>
+                            <a href="/accommodations/bunshinkan.html">Bunshinkan</a>
+                            <a href="/accommodations/edokan.html">Edokan</a>
+                            <a href="/accommodations/hinokinoma.html">Hinokinoma</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="/experiences/index.html" class="dropdown-toggle">Experience</a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-section">
+                                <span class="dropdown-header">Samurai</span>
+                                <a href="/experiences/samurai.html">Samurai Experience</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <span class="dropdown-header">Martial Arts</span>
+                                <a href="/experiences/kyudo.html">Kyūdō (Archery)</a>
+                                <a href="/experiences/karate.html">Karate</a>
+                                <a href="/experiences/kendo.html">Kendō</a>
+                                <a href="/experiences/iaido.html">Iaidō</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <span class="dropdown-header">Cultural</span>
+                                <a href="/experiences/taiko.html">Taiko Drumming</a>
+                                <a href="/experiences/chanoyu.html">Tea Ceremony</a>
+                                <a href="/experiences/ikebana.html">Ikebana</a>
+                                <a href="/experiences/bonseki.html">Bonseki</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <span class="dropdown-header">Mind–Body</span>
+                                <a href="/experiences/zazen.html">Zazen</a>
+                                <a href="/experiences/takigyo.html">Takigyō</a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="https://www.instagram.com/meihodoliving/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- Detail Page Content -->
+    <!-- Accommodation Detail Page -->
     <section class="section">
         <div class="container">
             <a href="/accommodations/index.html" class="back-link">← All accommodations</a>
             
-            <div class="page-header fade-in">
-                <h1>Geihinkan</h1>
+            <!-- Hero -->
+            <div class="accommodation-hero fade-in">
+                <div class="accommodation-hero-image">
+                    <div class="ph" aria-label="Geihinkan twin-wing architecture with gardens">
+                        Geihinkan — Twin-Wing Traditional Residence
+                    </div>
+                </div>
+                <div class="accommodation-hero-content">
+                    <h1>Geihinkan</h1>
+                    <p class="accommodation-deck">Twin-wing residence for groups, with one wing featuring an open-air bath.</p>
+                </div>
             </div>
-            
-            <div class="detail-hero fade-in">
-                <img width="1400" height="600" alt="Geihinkan accommodation hero"
-                    src='data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="600" viewBox="0 0 1400 600">
-                        <rect width="100%" height="100%" fill="%23e5e5e5"/>
-                        <text x="50%" y="50%" text-anchor="middle" dy="0.3em" font-family="sans-serif" font-size="18" fill="%23666">Geihinkan Hero Image (21:9)</text>
-                    </svg>' />
+
+            <!-- Room Information -->
+            <div class="accommodation-section fade-in">
+                <h2>Room Information</h2>
+                <div class="room-details">
+                    <div class="detail-item">
+                        <strong>Renting:</strong> The whole house
+                    </div>
+                    <div class="detail-item">
+                        <strong>Max:</strong> 6 people
+                    </div>
+                    <div class="detail-item">
+                        <strong>Layout:</strong> (Right) living room / (Left) living + Japanese-style bedroom
+                    </div>
+                    <div class="detail-item">
+                        <strong>Beds:</strong> King-size ×2 + 2 futon sets
+                    </div>
+                </div>
             </div>
-            
-            <div class="detail-content fade-in">
-                <div class="detail-section">
-                    <h2>Room Overview & Layout</h2>
-                    <p>Geihinkan represents the pinnacle of refined hospitality with traditional Japanese aesthetics. This spacious accommodation features premium materials including rare wood finishes and handcrafted details throughout.</p>
-                    <p>The sophisticated layout includes a formal reception area, private study nook, and elevated sleeping platform with views of the carefully maintained grounds.</p>
+
+            <!-- Bath -->
+            <div class="accommodation-section fade-in">
+                <h2>Bath</h2>
+                <p><strong>Right wing:</strong> cypress indoor bath</p>
+                <p><strong>Left wing:</strong> open-air bath (plus unit bath with jacuzzi)</p>
+            </div>
+
+            <!-- Check-in / Check-out -->
+            <div class="accommodation-section fade-in">
+                <h2>Check-in / Check-out</h2>
+                <p>15:00 – 11:00</p>
+                <p>Early check-in not available (cultural experiences/restaurant may be used for a fee). Late check-out up to 13:00 may be possible (¥10,000/room/hour; subject to availability).</p>
+            </div>
+
+            <!-- Things in the room -->
+            <div class="accommodation-section fade-in">
+                <h2>Things in the Room</h2>
+                <ul class="amenities-list">
+                    <li>Air conditioning</li>
+                    <li>Refrigerator</li>
+                    <li>Washing machine</li>
+                    <li>Coffee machine</li>
+                    <li>Washlet</li>
+                    <li>Dyson hair dryer</li>
+                    <li>Free Wi-Fi</li>
+                    <li>Water server</li>
+                    <li>Coffee</li>
+                    <li>Kettle</li>
+                    <li>Umbrella</li>
+                    <li>Indoor footwear</li>
+                </ul>
+            </div>
+
+            <!-- Amenities -->
+            <div class="accommodation-section fade-in">
+                <h2>Amenities</h2>
+                <p><strong>Standard:</strong> Shampoo, conditioner, body soap (ALLNA ORGANIC), toothbrush, razor</p>
+                <p><strong>Available on request:</strong> Hairbrush, hair iron, disposable slippers, pajamas</p>
+            </div>
+
+            <!-- Gallery -->
+            <div class="accommodation-section fade-in">
+                <h2>Gallery</h2>
+                <div class="accommodation-gallery">
+                    <div class="ph" style="aspect-ratio: 3/2; background: #e5e5e5; border-radius: 8px;" aria-label="Geihinkan twin-wing layout"></div>
+                    <div class="ph" style="aspect-ratio: 3/2; background: #e5e5e5; border-radius: 8px;" aria-label="Geihinkan open-air bath"></div>
+                    <div class="ph" style="aspect-ratio: 3/2; background: #e5e5e5; border-radius: 8px;" aria-label="Geihinkan living area"></div>
                 </div>
-                
-                <div class="detail-section">
-                    <h2>Bath</h2>
-                    <p>Luxurious private onsen-style bath with natural stone surroundings and temperature-controlled mineral water. Premium amenities and traditional wooden bath accessories provided.</p>
-                    <p>Available 24 hours for guest convenience.</p>
-                </div>
-                
-                <div class="detail-section">
-                    <h2>Check-in / Check-out</h2>
-                    <p><strong>Check-in:</strong> 3:00 PM - 7:00 PM<br>
-                    <strong>Check-out:</strong> 11:00 AM</p>
-                    <p>Personalized check-in service with traditional welcome ceremony available upon request.</p>
-                </div>
-                
-                <div class="detail-section">
-                    <h2>Facilities</h2>
-                    <ul>
-                        <li>Private entrance and garden</li>
-                        <li>Traditional irori hearth</li>
-                        <li>Climate control system</li>
-                        <li>Premium mini bar</li>
-                        <li>Digital safe</li>
-                        <li>High-speed Wi-Fi</li>
-                        <li>Sound system for meditation</li>
-                    </ul>
-                </div>
-                
-                <div class="detail-section">
-                    <h2>Amenities</h2>
-                    <ul>
-                        <li>Luxury organic bath collection</li>
-                        <li>Hand-woven silk yukata</li>
-                        <li>Artisan tea ceremony set</li>
-                        <li>Egyptian cotton linens</li>
-                        <li>Professional hair care products</li>
-                        <li>Meditation and yoga accessories</li>
-                    </ul>
-                </div>
-                
-                <div class="detail-section">
-                    <h2>Notes / Policies</h2>
-                    <ul>
-                        <li>Quiet hours: 9:00 PM - 7:00 AM</li>
-                        <li>Strictly no smoking</li>
-                        <li>Traditional footwear etiquette observed</li>
-                        <li>Cultural respect guidelines provided</li>
-                        <li>No pets allowed</li>
-                        <li>Maximum occupancy: 3 guests</li>
-                    </ul>
-                </div>
-                
-                <div class="detail-gallery">
-                    <img width="400" height="267" alt="Geihinkan reception area"
-                        src='data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="267" viewBox="0 0 400 267">
-                            <rect width="100%" height="100%" fill="%23e5e5e5"/>
-                            <text x="50%" y="50%" text-anchor="middle" dy="0.3em" font-family="sans-serif" font-size="14" fill="%23666">Reception (3:2)</text>
-                        </svg>' />
-                    
-                    <img width="400" height="267" alt="Geihinkan sleeping area"
-                        src='data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="267" viewBox="0 0 400 267">
-                            <rect width="100%" height="100%" fill="%23e5e5e5"/>
-                            <text x="50%" y="50%" text-anchor="middle" dy="0.3em" font-family="sans-serif" font-size="14" fill="%23666">Sleeping Area (3:2)</text>
-                        </svg>' />
-                    
-                    <img width="400" height="267" alt="Geihinkan onsen bath"
-                        src='data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="267" viewBox="0 0 400 267">
-                            <rect width="100%" height="100%" fill="%23e5e5e5"/>
-                            <text x="50%" y="50%" text-anchor="middle" dy="0.3em" font-family="sans-serif" font-size="14" fill="%23666">Onsen Bath (3:2)</text>
-                        </svg>' />
-                    
-                    <img width="400" height="267" alt="Geihinkan private garden"
-                        src='data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="267" viewBox="0 0 400 267">
-                            <rect width="100%" height="100%" fill="%23e5e5e5"/>
-                            <text x="50%" y="50%" text-anchor="middle" dy="0.3em" font-family="sans-serif" font-size="14" fill="%23666">Private Garden (3:2)</text>
-                        </svg>' />
-                </div>
-                
-                <div class="detail-cta">
-                    <h3>Inquiry about this room</h3>
-                    <p>Contact us to check availability and make a reservation for Geihinkan.</p>
-                    <a href="/contact/index.html" class="btn btn--primary">Contact us</a>
-                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="accommodation-cta fade-in">
+                <h3>Inquiry about this room</h3>
+                <p>Contact us to check availability and make a reservation for Geihinkan.</p>
+                <a href="/contact/index.html" class="btn btn--primary">Contact us</a>
             </div>
         </div>
     </section>
