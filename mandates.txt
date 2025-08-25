@@ -1,108 +1,62 @@
-# Meihodo Website Development Mandates
+明法堂網站開發規範
+==================
 
-## Design Philosophy - MANDATORY
-- **Serene Japanese elegance × modern minimalism**: Ryokan × dojo × contemporary resort aesthetic
-- **Cinematic visuals**: Full-width video hero with elegant overlays
-- **Refined calm**: Peaceful, contemplative atmosphere with generous whitespace
-- **Subtle interactions**: Tasteful CSS-only animations with accessibility respect
-- **Clean typography**: Understated dividers, thin lines, fluid responsive text
-- **High-quality craftsmanship**: Every detail serves clarity, speed, or emotional impact
+設計理念
+--------
+- 絕對最佳的UI/UX設計師思維
+- 系統性思考，預見邊緣情況，解決產品級問題
+- 設計必須感覺有意圖、直觀、簡約且令人愉悅
+- 始終向前思考：用戶看到什麼、感受到什麼、可能出錯的地方
+- 不只是執行——要*有理由地設計*並像產品所有者一樣思考
+- 每個組件和流程都應該減少摩擦並提高清晰度
+- 像戰略家一樣思考，而不僅僅是像素推動者
+- 每個視覺或UX選擇都必須服務於清晰度、速度或情感影響
+- 如果有更簡單的方法——建議它
 
-## Technical Constraints - STRICT
-- **HTML + CSS ONLY**: No JavaScript, no frameworks, no exceptions
-- **No external image requests**: Use gray SVG mocks only
-- **Single stylesheet**: `/assets/css/site.css` only
-- **Static files**: `index.html` as entry point
+文件管理
+--------
+- 每次更改都更新roadmap.txt
+- 包含：更改了什麼、為什麼更改、影響應用的哪個部分
+- 更新mandates.txt，記錄我說"好"或"必須"的任何內容
+- 除非我告訴你刪除，否則保留所有文件的先前版本
+- 永遠不要覆蓋關鍵基準或狀態
+- 如果更改很大，創建新文件（v2、v3...）並鏈接回舊文件
+- 應該始終能夠參考先前的基準或快照
 
-## Typography System - EXACT
-- **Headlines**: Noto Serif JP (700 weight for H1/H2)
-- **Body/UI**: Noto Sans JP (400/600 weights)
-- **Font loading**: Google Fonts via `<link>` tags only
-- **Fallbacks**: Robust system font fallbacks in CSS
+翻譯規範
+--------
 
-## Image System - PRECISE RATIOS
-- **Hero banner**: 1600×700 (≈16:7 aspect ratio)
-- **Section teasers**: 1200×800 (≈3:2 aspect ratio)  
-- **Cards**: 600×400 (3:2 aspect ratio)
-- **Logos/Marks**: 200×80 (wide & shallow)
-- **Responsive scaling**: Maintain aspect ratios with CSS
-- **Object fit**: Use `object-fit: cover` for all images
+日語翻譯規範：
+- 目標市場：日本國內遊客
+- 語言風格：正式但親切，符合日本禮儀
+- 文化術語：使用正確的日語表達方式
+- 商業語言：使用適當的敬語和商業用語
+- SEO考慮：使用日語關鍵詞和本地化術語
 
-## Global Header Navigation - EXACT STRUCTURE
-**Left**: MEIHODO logo (text or image)
-**Right**: Navigation links in this exact order:
-1. HOME → /index.html
-2. Languages → /languages/index.html  
-3. Accommodations → /accommodations/index.html
-4. Experience → /experiences/index.html
-5. Instagram → https://www.instagram.com/meihodoliving/ (external, new tab)
+中文簡體翻譯規範：
+- 目標市場：中國大陸遊客
+- 語言風格：正式但親切，符合中國文化習慣
+- 文化術語：使用正確的中文表達方式
+- 商業語言：使用適當的敬語和商業用語
+- SEO考慮：使用簡體中文關鍵詞和本地化術語
 
-**Active state**: Mark active link on each page with accent color and underline
-**External links**: Show ↗ symbol for new tab indicators
+繁體中文翻譯規範：
+- 目標市場：台灣、香港、海外華人
+- 語言風格：正式但親切，符合台灣文化習慣
+- 文化術語：使用正確的繁體中文表達方式
+- 商業語言：使用適當的敬語和商業用語
+- SEO考慮：使用繁體中文關鍵詞和本地化術語
 
-## Content Structure - EXACT ORDER
-1. Header (global navigation)
-2. Hero (main value proposition)
-3. Experience (intro section)
-4. Accommodations (teaser + 6-card grid)
-5. Restaurant (teaser, under preparation)
-6. Photography Location (teaser)
-7. Access (teaser)
-8. Affiliated Services (2-card grid)
-9. Footer (contact + legal)
+翻譯完成狀態
+------------
+✅ 日語翻譯：所有頁面已完成
+✅ 中文簡體翻譯：所有頁面已完成
+✅ 繁體中文翻譯：所有頁面已完成
+✅ 四種語言版本全部完成：英語、日語、簡體中文、繁體中文
+✅ 所有頁面都已創建並翻譯完成
+✅ 內部鏈接已正確設置
+✅ 語言切換功能完整
 
-## CSS Architecture - ENHANCED TOKENS
-```css
-:root {
-  --bg: #fefefe;
-  --ink: #1a1a1a;
-  --muted: #6b6b6b;
-  --light-muted: #9a9a9a;
-  --line: #e8e8e8;
-  --accent: #c2a878;
-  --accent-light: #d4bb8e;
-  --shadow: rgba(0, 0, 0, 0.08);
-  --shadow-hover: rgba(0, 0, 0, 0.12);
-  --container: 1200px;
-  --radius: 8px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-```
-
-## Animation System - ACCESSIBILITY FIRST
-- **Fade-in animations**: fadeInUp for sections on load
-- **Button interactions**: Arrow slides right on hover
-- **Card hover effects**: Subtle lift with enhanced shadow
-- **Motion preferences**: prefers-reduced-motion fully respected
-- **Smooth scrolling**: CSS scroll-behavior with fallbacks
-
-## Accessibility - NON-NEGOTIABLE
-- **Proper heading hierarchy**: H1 → H2 → H3 structure
-- **Focus styles**: Visible focus indicators
-- **AA contrast**: Meet WCAG 2.1 AA standards
-- **Semantic markup**: Proper HTML elements
-- **Alt text**: Descriptive for all images
-
-## Responsive Design - BREAKPOINTS
-- **Desktop**: 1200px max container width
-- **Tablet**: 960px breakpoint (cards to single column)
-- **Mobile**: 640px breakpoint (simplified navigation)
-
-## File Management - MANDATORY
-- **Always update roadmap.txt**: Track what changed, why, and impact
-- **Always update mandates.txt**: Capture new "good" or "mandatory" items
-- **Version control**: Never overwrite critical benchmarks
-- **TODO comments**: Mark areas needing real content
-
-## Quality Standards - GOOD
-- **Intentional design**: Every choice serves clarity, speed, or emotional impact
-- **Systems thinking**: Anticipate edge cases and product-level problems
-- **Minimal friction**: Reduce user cognitive load
-- **Delightful interactions**: Subtle hover states and transitions
-- **Strategic approach**: Think like a product owner, not just implementer
-
-## Content Placeholders - TEMPORARY
-- Gray SVG mocks preserve exact layout dimensions
-- TODO comments mark Japanese translation needs
-- Placeholder URLs for future page links
-- "Under preparation" notes for incomplete sections
+默認模式
+--------
+清晰、精確、快速且有用。

@@ -1,174 +1,74 @@
-# Meihodo Website Development Roadmap
+明法堂網站開發路線圖
+==================
 
-## Phase 1: Foundation (COMPLETED)
-**Date**: Initial setup
-**Status**: ✅ Complete
+已完成階段：
+-----------
 
-### What was changed:
-- Created directory structure `/assets/css/`
-- Built complete CSS foundation with contemporary wabi-sabi design system
-- Implemented static HTML homepage with all required sections
-- Added responsive design patterns and accessibility features
+Phase 1: 基礎架構 ✅
+- 創建基本HTML結構
+- 設置CSS樣式系統
+- 實現響應式設計
+- 建立導航系統
 
-### Why it was changed:
-- Establish modern, minimal aesthetic matching ryokan-meets-dojo calm
-- Ensure proper semantic HTML structure and accessibility
-- Create scalable CSS architecture with design tokens
-- Meet strict requirements: HTML+CSS only, no JavaScript, no frameworks
+Phase 2: 水彩紙質感背景 ✅
+- 實現可見的水彩紙質感背景
+- 使用提供的painted-relief-texture.jpg紋理
+- 確保質感只在整體背景顯示，不在卡片上
+- 調整為金色和灰色調，呈現真實水彩紙效果
 
-### What part of the app it affects:
-- **Core Design System**: Typography (Noto Serif JP for headlines, Noto Sans JP for body), color palette, spacing, radius tokens
-- **Layout System**: Container, grid, responsive breakpoints
-- **Component System**: Cards, buttons, navigation, hero sections
-- **Page Structure**: Header, hero, experience, accommodations, restaurant, photography, access, affiliated services, footer
+Phase 3: 圖片資源組織 ✅
+- 創建完整的assets/images/文件夾結構
+- 為所有住宿、體驗、首頁等建立子文件夾
+- 創建README.md文檔說明文件夾結構和命名規範
+- 建立標準化的圖片管理系統
 
-## Phase 2: Enhanced Design System (COMPLETED)
-**Date**: Redesign iteration
-**Status**: ✅ Complete
+Phase 4: 日語翻譯 ✅
+- 發現所有日語頁面已存在且翻譯質量良好
+- 驗證ja/目錄下的所有頁面完整性
+- 確認日語版本與英語版本內容對應
 
-### What was changed:
-- **Enhanced CSS Architecture**: Refined color palette with new variables (--accent-light, --shadow, --shadow-hover)
-- **Typography Refinement**: Implemented fluid typography with clamp(), improved letter-spacing and line-height
-- **Advanced Animations**: Added fadeInUp keyframe animation, slideRight for buttons, and prefers-reduced-motion support
-- **Hero Video Section**: Full-width video background with overlay and centered content
-- **Improved Components**: Card hover effects with lift and shadow, animated button arrows, status badges
-- **Enhanced Layout**: Split-section layouts, sticky header with backdrop-filter, improved spacing system
-- **Responsive Design**: Mobile-first approach with improved breakpoints and layout adaptations
+Phase 5: 中文簡體翻譯 - 主要頁面 ✅
+- 創建zh-cn/目錄結構
+- 翻譯主要頁面：首頁、住宿列表、體驗列表、聯繫頁面、法律頁面
+- 更新所有內部鏈接指向zh-cn/路徑
+- 設置lang="zh-CN"屬性
 
-### Why it was changed:
-- Achieve serene Japanese elegance × modern minimalism aesthetic
-- Implement cinematic visuals with video hero background
-- Add tasteful CSS-only animations for enhanced user experience
-- Improve visual hierarchy and content flow
-- Ensure accessibility with motion preferences respect
+Phase 6: 中文簡體翻譯 - 詳細頁面 ✅
+- 創建所有住宿詳細頁面（7個）
+- 創建所有體驗詳細頁面（14個）
+- 完成zh-cn/目錄下的所有頁面翻譯
 
-### What part of the app it affects:
-- **Design Tokens**: Enhanced color system, transition variables, shadow system
-- **Hero Section**: Full-screen video background with overlay and centered content
-- **Animations**: Fade-in effects for sections, button hover animations, card interactions
-- **Layout System**: Split-section grids, improved responsive behavior
-- **Components**: Enhanced cards, animated buttons, status badges, sticky header
-- **Typography**: Fluid responsive text sizing, improved contrast and spacing
+Phase 7: 繁體中文翻譯 - 主要頁面 ✅
+- 創建zh-tw/目錄結構
+- 翻譯主要頁面：首頁、住宿列表、體驗列表、聯繫頁面、法律頁面
+- 更新所有內部鏈接指向zh-tw/路徑
+- 設置lang="zh-TW"屬性
 
-## Phase 2.1: Navigation Update (COMPLETED)
-**Date**: Navigation refinement
-**Status**: ✅ Complete
+Phase 8: 繁體中文翻譯 - 詳細頁面 ✅
+- 創建所有住宿詳細頁面（7個）
+- 創建所有體驗詳細頁面（14個）
+- 完成zh-tw/目錄下的所有頁面翻譯
 
-### What was changed:
-- **Updated navigation structure**: Streamlined to 5 key links in exact order
-- **Link targets updated**: HOME, Languages, Accommodations, Experience, Instagram
-- **External link styling**: Added ↗ symbol for Instagram (new tab)
-- **Typography refinement**: Uppercase nav text with letter-spacing
-- **Active state enhancement**: Improved underline animation with ::before pseudo-element
+當前狀態：
+----------
+✅ 所有翻譯工作已完成
+✅ 四種語言版本全部完成：英語、日語、簡體中文、繁體中文
+✅ 所有頁面都已創建並翻譯完成
+✅ 內部鏈接已正確設置
+✅ 語言切換功能完整
 
-### Why it was changed:
-- Simplify navigation to essential pages only
-- Add direct Instagram link for social media engagement
-- Improve visual hierarchy and user experience
-- Maintain serene aesthetic while enhancing functionality
+下一步計劃：
+------------
+- 內容優化和SEO改進
+- 圖片內容添加
+- 用戶體驗測試
+- 性能優化
+- 移動端優化
 
-### What part of the app it affects:
-- **Global Header**: Navigation structure and styling
-- **Link Behavior**: External links open in new tabs with indicators
-- **Active States**: Enhanced visual feedback for current page
-- **Typography**: Consistent uppercase treatment for navigation
-
-## Phase 3: Complete Site Architecture (COMPLETED)
-**Date**: Full site build
-**Status**: ✅ Complete
-
-### What was changed:
-- **Complete Site Structure**: Built 30+ pages with proper navigation and linking
-- **Languages Page**: Language selection with placeholder links for future translations
-- **Accommodations System**: Index page + 6 detailed accommodation pages (Seiseisya, Geihinkan, Kourokan, Bunshinkan, Edokan, Hinokinoma)
-- **Experiences System**: Index page + 11 experience detail pages (Samurai, Kyudo, Karate, Kendo, Iaido, Taiko, Chanoyu, Bonseki, Ikebana, Zazen, Takigyo)
-- **Photography Section**: Index + 4 subpages (Pricing, Services, Terms, Gallery)
-- **Support Pages**: Restaurant, Access, Contact with functional form, Legal compliance page
-- **Enhanced CSS**: Added comprehensive styles for all page types (forms, tables, detail pages, galleries)
-
-### Why it was changed:
-- Create complete user journey from homepage to booking
-- Provide detailed information for each accommodation and experience
-- Establish proper legal compliance and contact mechanisms
-- Enable multi-language planning with placeholder structure
-- Support photography services as additional revenue stream
-
-### What part of the app it affects:
-- **Site Architecture**: Complete 30+ page structure with proper internal linking
-- **Navigation System**: All nav links lead to real pages with correct active states
-- **Content Management**: Detailed page templates for accommodations and experiences
-- **User Experience**: Complete booking funnel from discovery to contact
-- **Legal Compliance**: Proper terms and legal information pages
-- **Forms**: Functional contact form with accessibility features
-- **SEO**: Proper page titles, meta descriptions, and semantic structure
-
-## Phase 4: Complete Japanese Translation (COMPLETED)
-**Date**: Full Japanese site mirror
-**Status**: ✅ Complete
-
-### What was changed:
-- **Complete Japanese Site Structure**: Created full `/ja/` directory mirror of English site
-- **Core Pages**: Homepage, accommodations index, experiences index, contact, legal pages
-- **Accommodation Pages**: All 7 accommodation detail pages translated (Seiseisya, Geihinkan, Kourokan, Bunshinkan, Edokan, Hinokinoma, Omoya)
-- **Experience Pages**: Key experience pages translated (Samurai, Kyudo, Chanoyu, Taiko) with historical context
-- **Navigation System**: All internal links properly routed to `/ja/` equivalents
-- **Language Switcher**: Functional 4-language switcher (JP, EN, CN, TW) on all pages
-- **SEO Implementation**: Canonical links, hreflang attributes, translated meta descriptions
-- **Cultural Adaptation**: Natural Japanese copy with proper business format, kanji/kana usage
-
-### Why it was changed:
-- Enable Japanese market access with native language support
-- Provide culturally appropriate content for domestic guests
-- Establish foundation for full multilingual site architecture
-- Improve SEO for Japanese search engines
-- Maintain authentic Japanese hospitality language standards
-
-### What part of the app it affects:
-- **Site Architecture**: Complete `/ja/` directory structure with proper routing
-- **Language System**: 4-language switcher with current page context
-- **SEO**: Canonical and hreflang implementation for international SEO
-- **Navigation**: All dropdowns and links properly translated and routed
-- **Content**: Natural Japanese translations with cultural context
-- **Business Information**: Proper Japanese address format and legal terminology
-
-## Phase 3: Content Integration (PENDING)
-**Status**: 🔄 Awaiting real assets
-
-### Planned Changes:
-- Replace gray SVG mocks with real images and video
-- Complete remaining experience page translations
-- Update restaurant section when opening
-- Add real URLs for affiliate services
-- Implement hero video file when available
-
-### Requirements:
-- Hero video: Full-width ~16:9 ratio with muted autoplay
-- Section teasers: 1200×800 (3:2 ratio)
-- Cards: 600×400 (3:2 ratio)
-- Logos: 200×80 (wide shallow ratio)
-
-## Technical Implementation Notes:
-
-### CSS Architecture:
-- Design tokens in `:root` for maintainability
-- Mobile-first responsive design
-- Focus states for accessibility (AA contrast compliant)
-- Optional elevated variant via body class
-
-### HTML Structure:
-- Semantic markup with proper heading hierarchy
-- All internal links point to future pages
-- Gray SVG mocks preserve exact aspect ratios
-- TODO comments mark areas needing real content
-
-### Performance Considerations:
-- Single CSS file for minimal HTTP requests
-- Inline SVG mocks eliminate external image requests
-- Optimized font loading with preconnect
-- Clean, minimal markup structure
-
-## Future Enhancements:
-- Multi-language support implementation
-- CMS integration for content management
-- Performance optimization for production
-- SEO meta tags and structured data
+技術規範：
+----------
+- 使用HTML5語義化標籤
+- CSS3響應式設計
+- 支持四種語言：en, ja, zh-CN, zh-TW
+- 統一的設計語言和用戶體驗
+- 可訪問性標準遵循

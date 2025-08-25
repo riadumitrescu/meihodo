@@ -1,7 +1,7 @@
 /* Meihodo Site Styles - Serene Japanese Elegance × Modern Minimalism */
 
 :root {
-  --bg: #fefefe;
+  --bg: #f8f6f2;
   --ink: #1a1a1a;
   --muted: #6b6b6b;
   --light-muted: #9a9a9a;
@@ -13,10 +13,33 @@
   --container: 1200px;
   --radius: 8px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --texture-opacity: 0.8;
+  --texture-opacity-light: 0.6;
+  --texture-opacity-dark: 1;
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* Watercolor Texture Base */
+.watercolor-texture {
+  position: relative;
+}
+
+.watercolor-texture::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.4' numOctaves='2' seed='1'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)'/%3E%3C/svg%3E");
+  background-size: 400px 400px, 100px 100px;
+  opacity: var(--texture-opacity);
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: multiply;
 }
 
 html {
@@ -30,6 +53,24 @@ body {
   font-family: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
   line-height: 1.7;
   overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../texture/painted-relief-texture.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: var(--texture-opacity-light);
+  pointer-events: none;
+  z-index: -1;
+  mix-blend-mode: multiply;
 }
 
 /* Animations */
@@ -450,6 +491,11 @@ img, video {
   padding: 5rem 0;
   background: linear-gradient(180deg, #fefefe, #f9f9f9);
   border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.hero-text-section::before {
+  display: none;
 }
 
 .hero-text-content {
@@ -930,6 +976,10 @@ img, video {
   margin-bottom: 6rem;
   scroll-margin-top: 100px; /* Account for sticky header */
   position: relative;
+}
+
+.experience-group::after {
+  display: none;
 }
 
 .experience-group::before {
@@ -1676,6 +1726,10 @@ footer {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
   overflow: hidden;
+}
+
+.accommodation-section::after {
+  display: none;
 }
 
 .accommodation-section::before {
