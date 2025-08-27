@@ -49,6 +49,33 @@ Phase 8: 繁體中文翻譯 - 詳細頁面 ✅
 - 創建所有體驗詳細頁面（14個）
 - 完成zh-tw/目錄下的所有頁面翻譯
 
+Phase 9: 住宿圖片整合 ✅
+- 替換首頁住宿卡片的SVG佔位符為真實圖片
+- 更新所有7個住宿頁面的英雄圖片區域
+- 更新所有住宿頁面的圖片畫廊
+- 更新住宿列表頁面 (accommodations/index.html) 的卡片圖片
+- 使用適當的圖片尺寸和CSS類別保持原始設計
+- 圖片來源：使用assets/images/accommodations/中各住宿文件夾的實際圖片
+- 主要圖片選擇：
+  * Seiseisya: DSC02702-HDR.jpg (exterior and garden view)
+  * Geihinkan: DSC02846-HDR.jpg (open-air bath)
+  * Kourokan: DSC02565-HDR.jpg (semi-open-air bath)
+  * Bunshinkan: DSC04948-HDR.jpg (traditional rooms with wooden deck)
+  * Edokan: DSC01266.jpg (Japanese-style room)
+  * Hinokinoma: DSC01229.jpg (veranda area)
+
+
+Phase 10: 畫廊模態功能 ✅
+- 創建統一的畫廊圖片尺寸 (280px height, responsive width)
+- 實現點擊圖片打開全屏模態的功能
+- 添加導航按鈕 (上一張/下一張)
+- 支持鍵盤導航 (左右箭頭鍵, ESC鍵)
+- 點擊背景或圖片關閉模態
+- 圖片計數器顯示 (1/3, 2/3, 3/3)
+- 響應式設計，支持移動端
+- 創建專用JavaScript文件 (assets/js/gallery.js)
+- 在所有住宿頁面集成畫廊功能
+
 當前狀態：
 ----------
 ✅ 所有翻譯工作已完成
@@ -56,9 +83,11 @@ Phase 8: 繁體中文翻譯 - 詳細頁面 ✅
 ✅ 所有頁面都已創建並翻譯完成
 ✅ 內部鏈接已正確設置
 ✅ 語言切換功能完整
+✅ 住宿圖片已整合到英語版本
 
 下一步計劃：
 ------------
+- 為其他語言版本（日語、簡體中文、繁體中文）更新住宿圖片
 - 內容優化和SEO改進
 - 圖片內容添加
 - 用戶體驗測試
@@ -72,3 +101,4 @@ Phase 8: 繁體中文翻譯 - 詳細頁面 ✅
 - 支持四種語言：en, ja, zh-CN, zh-TW
 - 統一的設計語言和用戶體驗
 - 可訪問性標準遵循
+- 圖片使用原始CSS類別保持設計一致性
