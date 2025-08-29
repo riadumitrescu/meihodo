@@ -20,6 +20,9 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/assets/css/site.css">
+    
+    <!-- Contact Form Script -->
+    <script src="/assets/js/contact-form-ja.js" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -106,7 +109,64 @@
                 </div>
             </div>
             
-            <div class="split-section fade-in">
+            <div class="contact-form fade-in">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Netlify form handling -->
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p class="hidden" style="display: none;">
+                        <label>人間の場合は入力しないでください: <input name="bot-field" /></label>
+                    </p>
+                    
+                    <div class="form-group">
+                        <label for="name">お名前 *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">メールアドレス *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">電話番号（任意）</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="topic">お問い合わせ内容</label>
+                        <select id="topic" name="topic">
+                            <option value="accommodation">宿泊</option>
+                            <option value="experience">体験</option>
+                            <option value="photography">撮影</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">メッセージ *</label>
+                        <textarea id="message" name="message" required placeholder="ご質問、ご希望の日程、人数、その他のご要望などをお聞かせください..."></textarea>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn--primary" id="submit-btn">お問い合わせを送信</button>
+                    </div>
+                </form>
+                
+                <!-- Success/Error Messages -->
+                <div id="form-messages" style="display: none;"></div>
+                
+                <!-- Alternative Contact Methods -->
+                <div class="alternative-contact fade-in" style="margin-top: 3rem; text-align: center; padding: 2rem; background: rgba(194, 168, 120, 0.05); border-radius: var(--radius);">
+                    <h3>直接お問い合わせをご希望ですか？</h3>
+                    <p>以下の方法でもお気軽にご連絡ください：</p>
+                    <div class="contact-buttons" style="margin-top: 1.5rem;">
+                        <a href="mailto:meihodoliving@gmail.com?subject=明法堂へのお問い合わせ" class="btn btn--secondary" style="margin: 0.5rem;">メールを送信</a>
+                        <a href="tel:+81967245090" class="btn btn--secondary" style="margin: 0.5rem;">お電話</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="split-section fade-in" style="margin-top: 4rem;">
                 <div class="contact-info">
                     <h2>連絡先情報</h2>
                     <div class="contact-details">

@@ -13,6 +13,9 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/assets/css/site.css">
+    
+    <!-- Contact Form Script -->
+    <script src="/assets/js/contact-form.js" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -99,7 +102,13 @@
             </div>
             
             <div class="contact-form fade-in">
-                <form method="post" action="#">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Netlify form handling -->
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p class="hidden" style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+                    
                     <div class="form-group">
                         <label for="name">Name *</label>
                         <input type="text" id="name" name="name" required>
@@ -131,9 +140,22 @@
                     </div>
                     
                     <div class="form-submit">
-                        <button type="submit" class="btn btn--primary">Send Inquiry</button>
+                        <button type="submit" class="btn btn--primary" id="submit-btn">Send Inquiry</button>
                     </div>
                 </form>
+                
+                <!-- Success/Error Messages -->
+                <div id="form-messages" style="display: none;"></div>
+                
+                <!-- Alternative Contact Methods -->
+                <div class="alternative-contact fade-in" style="margin-top: 3rem; text-align: center; padding: 2rem; background: rgba(194, 168, 120, 0.05); border-radius: var(--radius);">
+                    <h3>Prefer to contact us directly?</h3>
+                    <p>You can also reach us through:</p>
+                    <div class="contact-buttons" style="margin-top: 1.5rem;">
+                        <a href="mailto:meihodoliving@gmail.com?subject=Meihodo Inquiry" class="btn btn--secondary" style="margin: 0.5rem;">Send Email</a>
+                        <a href="tel:+81967245090" class="btn btn--secondary" style="margin: 0.5rem;">Call Us</a>
+                    </div>
+                </div>
             </div>
             
             <div class="contact-info fade-in" style="margin-top: 4rem; text-align: center;">
