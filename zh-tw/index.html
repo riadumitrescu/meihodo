@@ -20,7 +20,15 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">MEIHODO</div>
-                <nav class="nav">
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="開啟行動選單">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <nav class="nav" id="main-nav">
                     <a href="/zh-tw/index.html" class="active">首頁</a>
                     <div class="dropdown">
                         <span class="dropdown-toggle">語言</span>
@@ -289,5 +297,8 @@
     
     <!-- Video Controls Script -->
     <script src="/assets/js/video-controls.js" defer></script>
+    
+    <!-- Mobile Navigation Script -->
+    <script src="/assets/js/mobile-nav.js" defer></script>
 </body>
 </html>
