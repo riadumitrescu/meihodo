@@ -191,10 +191,216 @@ img, video {
   display: block;
   max-width: 100%;
   height: auto;
-  object-fit: cover;
-}
+      object-fit: cover;
+  }
 
-/* Layout */
+  /* Force 3:2 aspect ratio for section images */
+  .section img[width="1200"][height="800"] {
+    width: 100%;
+    aspect-ratio: 3/2;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Force 3:2 aspect ratio for experience hero images */
+  .experience-hero img[width="1200"][height="800"] {
+    width: 100%;
+    aspect-ratio: 3/2;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Force 4:3 aspect ratio for experience gallery images */
+  .experience-gallery img[width="600"][height="400"] {
+    width: 100%;
+    aspect-ratio: 4/3;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+
+  /* FAQ Section Styles */
+  .faq-section details {
+    margin-bottom: 1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .faq-section summary {
+    padding: 1rem;
+    background: var(--bg);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+
+  .faq-section summary:hover {
+    background: var(--accent);
+    color: white;
+  }
+
+  .faq-section details[open] summary {
+    background: var(--accent);
+    color: white;
+  }
+
+  .faq-section details p {
+    padding: 1rem;
+    margin: 0;
+    background: white;
+    border-top: 1px solid var(--line);
+  }
+
+  /* Cancellation Policy Styles */
+  .cancellation-policy {
+    background: var(--bg);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    margin-top: 1rem;
+  }
+
+  .cancellation-policy h4 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+
+  /* Logo Section Styles */
+  .logo-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+  }
+
+  .meihodo-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo-circle {
+    width: 80px;
+    height: 80px;
+    border: 3px solid var(--ink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+  }
+
+  .logo-symbol {
+    width: 40px;
+    height: 40px;
+    background: var(--ink);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M8 12C8 10 10 8 12 8H28C30 8 32 10 32 12V28C32 30 30 32 28 32H12C10 32 8 30 8 28V12ZM12 12V28H28V12H12Z'/%3E%3Cpath d='M16 16C16 14 18 12 20 12C22 12 24 14 24 16V24C24 26 22 28 20 28C18 28 16 26 16 24V16Z'/%3E%3C/svg%3E") center/contain;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M8 12C8 10 10 8 12 8H28C30 8 32 10 32 12V28C32 30 30 32 28 32H12C10 32 8 30 8 28V12ZM12 12V28H28V12H12Z'/%3E%3Cpath d='M16 16C16 14 18 12 20 12C22 12 24 14 24 16V24C24 26 22 28 20 28C18 28 16 26 16 24V16Z'/%3E%3C/svg%3E") center/contain;
+  }
+
+  .logo-text {
+    font-family: "Noto Serif JP", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* Pricing Table Styles */
+  .pricing-tables {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .pricing-table {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .pricing-table h3 {
+    background: var(--accent);
+    color: white;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    font-family: "Noto Serif JP", serif;
+  }
+
+  .pricing-table-content {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .pricing-table-content th,
+  .pricing-table-content td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .pricing-table-content th {
+    background: var(--bg);
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .pricing-table-content td {
+    vertical-align: top;
+  }
+
+  .pricing-table-content small {
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+
+  .pricing-note {
+    background: var(--bg);
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .pricing-table-content {
+      font-size: 0.875rem;
+    }
+    
+    .pricing-table-content th,
+    .pricing-table-content td {
+      padding: 0.75rem 0.5rem;
+    }
+    
+    .logo-text {
+      font-size: 2rem;
+    }
+    
+    .logo-circle {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .logo-symbol {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  /* Exception: Access image should show original proportions */
+  .section img[alt*="Access"],
+  .section img[alt*="アクセス"],
+  .section img[alt*="交通"] {
+    aspect-ratio: unset !important;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Layout */
 .container {
   max-width: var(--container);
   margin: 0 auto;
@@ -608,9 +814,12 @@ img, video {
   transform: scaleX(1);
 }
 
-.card img {
-  transition: var(--transition);
-}
+  .card img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    transition: var(--transition);
+  }
 
 .card:hover img {
   transform: scale(1.05);
@@ -1081,11 +1290,11 @@ img, video {
   transform: scaleX(1);
 }
 
-.hero-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition);
+  .hero-card img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    transition: var(--transition);
 }
 
 .hero-card:hover img {
@@ -1559,10 +1768,17 @@ footer {
 .experience-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
+      gap: 1rem;
+  }
 
-.experience-cta {
+  .experience-gallery img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+
+  .experience-cta {
   text-align: center;
   padding: 3rem 0;
   margin-top: 3rem;
