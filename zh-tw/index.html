@@ -92,13 +92,26 @@
     <!-- Hero Section with Video Background -->
     <section class="hero">
         <div class="hero-video">
-            <video autoplay muted loop poster="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'><rect width='100%' height='100%' fill='%23e5e5e5'/><text x='50%' y='50%' text-anchor='middle' dy='0.3em' font-family='sans-serif' font-size='18' fill='%23666'>Hero Video Placeholder (16:9)</text></svg>">
-                <!-- Video source would go here when available -->
-                <!-- <source src="/assets/video/hero.mp4" type="video/mp4"> -->
+            <video 
+                id="hero-video" 
+                muted 
+                loop 
+                playsinline
+                preload="metadata"
+                poster="/assets/images_organized/homepage/video-poster1.png">
+                <source src="/assets/images/homepage/hero-video-50mb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
+            
+            <!-- Custom Video Controls -->
+            <div class="video-controls">
+                <button id="play-pause" class="control-btn" aria-label="Play/Pause">
+                    <span class="play-icon">▶</span>
+                    <span class="pause-icon">⏸</span>
+                </button>
+            </div>
         </div>
         <div class="hero-overlay"></div>
-        <!-- Clean video hero with no text overlay -->
     </section>
 
     <!-- Hero Text Section -->
@@ -273,5 +286,8 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Video Controls Script -->
+    <script src="/assets/js/video-controls.js" defer></script>
 </body>
 </html>
