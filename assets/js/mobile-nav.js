@@ -32,24 +32,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Handle dropdown toggles on mobile
+    // Handle dropdown toggles on mobile - only for Languages
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     dropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
-                e.preventDefault();
                 const dropdown = this.closest('.dropdown');
-                const isOpen = dropdown.classList.contains('dropdown--open');
+                const isLanguages = dropdown.classList.contains('dropdown--languages');
                 
-                // Close all other dropdowns
-                document.querySelectorAll('.dropdown').forEach(d => {
-                    d.classList.remove('dropdown--open');
-                });
-                
-                // Toggle current dropdown
-                if (!isOpen) {
-                    dropdown.classList.add('dropdown--open');
+                // Only allow dropdown for Languages section
+                if (isLanguages) {
+                    e.preventDefault();
+                    const isOpen = dropdown.classList.contains('dropdown--open');
+                    
+                    // Close all other dropdowns
+                    document.querySelectorAll('.dropdown').forEach(d => {
+                        d.classList.remove('dropdown--open');
+                    });
+                    
+                    // Toggle current dropdown
+                    if (!isOpen) {
+                        dropdown.classList.add('dropdown--open');
+                    }
                 }
+                // For other dropdowns (Experiences, Accommodations), let them work as normal links
+                // No preventDefault, so they'll navigate to their pages
             }
         });
     });

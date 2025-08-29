@@ -701,12 +701,18 @@ img, video {
     font-size: 0.9rem;
   }
   
+  /* Only show dropdown arrow for Languages on mobile */
   .dropdown-toggle::after {
+    display: none;
+  }
+  
+  .dropdown--languages .dropdown-toggle::after {
+    display: block;
     margin-left: auto;
     transition: transform 0.3s ease;
   }
   
-  .dropdown--open .dropdown-toggle::after {
+  .dropdown--languages.dropdown--open .dropdown-toggle::after {
     transform: rotate(180deg);
   }
   
@@ -733,6 +739,25 @@ img, video {
     color: white;
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
+  }
+  
+  /* Make Experiences and Accommodations work as simple links on mobile */
+  .dropdown--experiences .dropdown-toggle,
+  .dropdown--accommodations .dropdown-toggle {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  .dropdown--experiences .dropdown-toggle:hover,
+  .dropdown--accommodations .dropdown-toggle:hover {
+    color: var(--accent);
+  }
+  
+  /* Hide dropdown content for non-language dropdowns on mobile */
+  .dropdown--experiences .dropdown-content,
+  .dropdown--accommodations .dropdown-content {
+    display: none !important;
   }
 }
 
