@@ -1,4 +1,10 @@
-// Contact Form Handler for Meihodo (Japanese) with Formspree
+// Alternative Contact Form Handler using EmailJS
+// This is a backup option if you prefer EmailJS over Formspree
+
+// First, add this to your HTML head section:
+// <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+// <script>emailjs.init("YOUR_USER_ID");</script>
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
@@ -8,14 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Show loading state
     function showLoading() {
-        submitBtn.textContent = '送信中...';
+        submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         submitBtn.style.opacity = '0.7';
     }
     
     // Reset button state
     function resetButton() {
-        submitBtn.textContent = 'お問い合わせを送信';
+        submitBtn.textContent = 'Send Inquiry';
         submitBtn.disabled = false;
         submitBtn.style.opacity = '1';
     }
@@ -45,42 +51,43 @@ document.addEventListener('DOMContentLoaded', function() {
         const message = form.querySelector('#message').value.trim();
         
         if (!name || !email || !message) {
-            showMessage('必須項目を入力してください。', 'error');
+            showMessage('Please fill in all required fields.', 'error');
             return;
         }
         
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            showMessage('有効なメールアドレスを入力してください。', 'error');
+            showMessage('Please enter a valid email address.', 'error');
             return;
         }
         
         // Show loading state
         showLoading();
         
-        // Prepare form data
-        const formData = new FormData(form);
+        // Prepare email template parameters
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            phone: form.querySelector('#phone')?.value || 'Not provided',
+            topic: form.querySelector('#topic')?.value || 'General inquiry',
+            message: message,
+            to_email: 'meihodoliving@gmail.com'
+        };
         
-        // Submit to Formspree
-        fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
+        // Send email using EmailJS
+        emailjs.send(
+            'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+            'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+            templateParams
+        )
+        .then(function(response) {
+            showMessage('Thank you! Your message has been sent successfully. We will get back to you soon.', 'success');
+            form.reset();
         })
-        .then(response => {
-            if (response.ok) {
-                showMessage('ありがとうございます！お問い合わせを送信いたしました。近日中にご返信いたします。', 'success');
-                form.reset();
-            } else {
-                throw new Error('Network response was not ok');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            showMessage('申し訳ございません。メッセージの送信に失敗いたしました。再度お試しいただくか、直接メールでご連絡ください。', 'error');
+        .catch(function(error) {
+            console.error('EmailJS Error:', error);
+            showMessage('Sorry, there was an error sending your message. Please try again or contact us directly via email.', 'error');
         })
         .finally(() => {
             resetButton();
@@ -105,3 +112,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+/*
+EmailJS Setup Instructions:
+
+1. Sign up at emailjs.com
+2. Create a new email service (Gmail, Outlook, etc.)
+3. Create an email template
+4. Get your User ID, Service ID, and Template ID
+5. Replace the placeholders in this code:
+   - YOUR_USER_ID
+   - YOUR_SERVICE_ID  
+   - YOUR_TEMPLATE_ID
+
+EmailJS Template Example:
+Subject: New Contact Form Submission from {{from_name}}
+
+Name: {{from_name}}
+Email: {{from_email}}
+Phone: {{phone}}
+Topic: {{topic}}
+Message: {{message}}
+
+This email was sent from the Meihodo website contact form.
+*/
+
