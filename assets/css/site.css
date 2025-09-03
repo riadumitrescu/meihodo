@@ -1089,7 +1089,7 @@ img, video {
   color: var(--ink);
   margin-bottom: 1.5rem;
   text-shadow: none;
-  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   line-height: 1.3;
   letter-spacing: -0.01em;
   font-weight: 700;
