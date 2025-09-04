@@ -203,7 +203,7 @@ img, video {
   }
 
   /* Force 3:2 aspect ratio for experience hero images */
-  .experience-hero img[width="1200"][height="800"] {
+  .experience-hero img {
     width: 100%;
     aspect-ratio: 3/2;
     height: auto;
