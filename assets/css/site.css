@@ -4047,6 +4047,11 @@ footer {
   margin-bottom: 1.5rem;
 }
 
+.transportation-section h3 {
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
 .transport-details h4 {
   color: var(--secondary);
   margin: 1.5rem 0 1rem 0;
