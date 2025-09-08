@@ -62,11 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'Traditional Japanese'
         },
         {
-            src: '/assets/images_organized/restaurant/sushi/sushi-dish-12.PNG',
-            alt: 'Seasonal sushi showcase',
-            title: 'Seasonal Showcase'
-        },
-        {
             src: '/assets/images_organized/restaurant/sushi/sushi-dish-13.JPG',
             alt: 'Premium sushi ingredients',
             title: 'Premium Ingredients'
