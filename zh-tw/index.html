@@ -18,6 +18,43 @@
     <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
+    <!-- Fixed Navigation Rail -->
+    <nav aria-label="Main Navigation" style="
+      position:fixed; right:20px; top:50%; transform:translateY(-50%);
+      z-index:9998; display:flex; flex-direction:column; gap:15px;
+    ">
+      <a href="/zh-tw/accommodations/index.html" aria-label="住宿一覽" style="
+        width:80px; height:80px;
+        display:flex; align-items:center; justify-content:center;
+        border:2px solid #5c4033; border-radius:8px;
+        font:600 14px/1 'Noto Serif JP', serif;
+        color:#5c4033; text-decoration:none;
+        background:#fdfaf6;
+        box-shadow:0 2px 4px rgba(0,0,0,0.15);
+        transition:all 0.3s ease;
+        writing-mode:vertical-rl; text-orientation:upright;
+        letter-spacing:2px;
+      " onmouseover="this.style.background='#5c4033';this.style.color='#fff';this.style.transform='scale(1.05)';"
+         onmouseout="this.style.background='#fdfaf6';this.style.color='#5c4033';this.style.transform='scale(1)';">
+        住宿一覽
+      </a>
+      <a href="/zh-tw/experiences/index.html" aria-label="體驗一覽" style="
+        width:80px; height:80px;
+        display:flex; align-items:center; justify-content:center;
+        border:2px solid #5c4033; border-radius:8px;
+        font:600 14px/1 'Noto Serif JP', serif;
+        color:#5c4033; text-decoration:none;
+        background:#fdfaf6;
+        box-shadow:0 2px 4px rgba(0,0,0,0.15);
+        transition:all 0.3s ease;
+        writing-mode:vertical-rl; text-orientation:upright;
+        letter-spacing:2px;
+      " onmouseover="this.style.background='#5c4033';this.style.color='#fff';this.style.transform='scale(1.05)';"
+         onmouseout="this.style.background='#fdfaf6';this.style.color='#5c4033';this.style.transform='scale(1)';">
+        體驗一覽
+      </a>
+    </nav>
+
     <!-- Fixed Language Switcher -->
     <nav aria-label="Language" style="
       position:fixed; right:20px; bottom:20px; z-index:9999;
