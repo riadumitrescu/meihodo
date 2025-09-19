@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
+    <div id="blackout" aria-hidden="true"></div>
+    
     <!-- Fixed Language Switcher -->
     <nav aria-label="Language" style="
       position:fixed; right:20px; bottom:20px; z-index:9999;
@@ -187,6 +189,7 @@
         <div class="hero-video">
             <video 
                 id="hero-video" 
+                class="hero-video"
                 muted 
                 loop 
                 playsinline
@@ -235,6 +238,16 @@
     <!-- Hero Text Section -->
     <section class="section section--large hero-text-section">
         <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="unified-heading">鳴鳳堂について</h2>
+                <div class="section-header-image">
+                    <img src="/assets/images/homepage/IMG_5132.PNG" alt="鳴鳳堂の全景 - 阿蘇の自然に囲まれた伝統的な建物と庭園" class="unified-image">
+                </div>
+                <div class="section-header-actions">
+                    <a href="/ja/about/" class="btn btn--outline">詳しくみる</a>
+                </div>
+            </div>
+            
             <div class="hero-text-content fade-in">
                 <h1>本格的な侍体験と日本文化を阿蘇で体感</h1>
                 <p class="unified-text--large">阿蘇の大自然に囲まれた『鳴鳳堂』では、弓道・空手・剣道・居合道などの武道体験や、和太鼓・茶道・盆石・華道・滝行などの伝統文化体験が楽しめます。武道着を着て"侍体験コース"にも挑戦でき、家族旅行やカップルでの思い出作りにも人気のプログラムです。</p>
@@ -414,6 +427,7 @@
     
     <!-- Video Controls Script -->
     <script src="/assets/js/video-controls.js" defer></script>
+    <script src="/assets/js/blackout-animation.js" defer></script>
     
     <!-- Mobile Navigation Script -->
     <script src="/assets/js/mobile-nav.js" defer></script>

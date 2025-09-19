@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
+    <div id="blackout" aria-hidden="true"></div>
 
     <!-- Fixed Language Switcher -->
     <nav aria-label="Language" style="
@@ -188,6 +189,7 @@
         <div class="hero-video">
             <video 
                 id="hero-video" 
+                class="hero-video"
                 muted 
                 loop 
                 playsinline
@@ -236,6 +238,16 @@
     <!-- Hero Text Section -->
     <section class="section section--large hero-text-section">
         <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="unified-heading">About Meihodo</h2>
+                <div class="section-header-image">
+                    <img src="/assets/images/homepage/IMG_5132.PNG" alt="Meihodo aerial view - traditional buildings and gardens surrounded by Aso's natural beauty" class="unified-image">
+                </div>
+                <div class="section-header-actions">
+                    <a href="/about/" class="btn btn--outline">Learn More</a>
+                </div>
+            </div>
+            
             <div class="hero-text-content fade-in">
                 <h1>Authentic Samurai Experience and Japanese Culture in Aso</h1>
                 <p class="unified-text--large">At Meihodo, surrounded by the natural beauty of Aso, explore martial arts such as Kyūdō, Karate, Kendō, and Iaidō, along with traditional culture including Taiko drumming, tea ceremony, bonseki, ikebana, seated meditation, and waterfall training. You can also try the "Samurai Experience Course" wearing martial arts attire, popular for creating memories during family trips or for couples.</p>
@@ -413,6 +425,7 @@
     <!-- Scripts -->
     <script src="/assets/js/site.js" defer></script>
     <script src="/assets/js/video-controls.js" defer></script>
+    <script src="/assets/js/blackout-animation.js" defer></script>
     
     <!-- Mobile Navigation Script -->
     <script src="/assets/js/mobile-nav.js" defer></script>

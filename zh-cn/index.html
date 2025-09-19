@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
+    <div id="blackout" aria-hidden="true"></div>
+    
     <!-- Fixed Language Switcher -->
     <nav aria-label="Language" style="
       position:fixed; right:20px; bottom:20px; z-index:9999;
@@ -180,6 +182,7 @@
         <div class="hero-video">
             <video 
                 id="hero-video" 
+                class="hero-video"
                 muted 
                 loop 
                 playsinline
@@ -228,6 +231,16 @@
     <!-- Hero Text Section -->
     <section class="section section--large hero-text-section">
         <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="unified-heading">关于鳴鳳堂</h2>
+                <div class="section-header-image">
+                    <img src="/assets/images/homepage/IMG_5132.PNG" alt="鳴鳳堂鸟瞰图 - 被阿苏自然美景环绕的传统建筑和庭院" class="unified-image">
+                </div>
+                <div class="section-header-actions">
+                    <a href="/zh-cn/about/" class="btn btn--outline">了解更多</a>
+                </div>
+            </div>
+            
             <div class="hero-text-content fade-in">
                 <h1>阿苏正宗武士体验与日本文化</h1>
                 <p class="unified-text--large">在阿苏的自然美景环绕下的『鳴鳳堂』，您可以体验弓道、空手道、剑道、居合道等武术，以及和太鼓、茶道、盆石、花道、滝行等传统文化体验。您还可以穿着武道服挑战"武士体验课程"，这是家庭旅行或情侣回忆制作的受欢迎项目。</p>
@@ -407,5 +420,6 @@
     
     <!-- Mobile Navigation Script -->
     <script src="/assets/js/mobile-nav.js" defer></script>
+    <script src="/assets/js/blackout-animation.js" defer></script>
 </body>
 </html>

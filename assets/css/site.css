@@ -1831,6 +1831,65 @@ img, video {
   font-size: 1.125rem;
 }
 
+.section-header-image {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+
+.section-header-actions {
+  margin-top: 1.5rem;
+}
+
+/* Blackout and Video Fade Animation */
+#blackout {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  opacity: 1;
+  transition: opacity 2.0s ease;
+  z-index: 9999;
+}
+
+.hero-video {
+  opacity: 0;
+  transition: opacity 2.4s ease 0.6s; /* 遅延を0.6sに延ばす */
+}
+
+/* ロード完了後の状態 */
+body.is-loaded #blackout {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.is-loaded .hero-video {
+  opacity: 1;
+}
+
+/* 低速端末用に少し長めの余韻 */
+@media (min-width: 768px) {
+  .hero-video {
+    transition: opacity 2.6s ease 0.7s;
+  }
+}
+
+/* 動きを苦手とするユーザー配慮 */
+@media (prefers-reduced-motion: reduce) {
+  #blackout,
+  .hero-video {
+    transition: none !important;
+  }
+  
+  #blackout {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .hero-video {
+    opacity: 1;
+  }
+}
+
 /* Image Placeholders */
 .placeholder-img {
   background: #e5e5e5;
@@ -2441,6 +2500,7 @@ footer {
     max-width: 100%;
   }
   
+  
   .section {
     padding: 3rem 0;
   }
@@ -2515,6 +2575,7 @@ footer {
     line-height: 1.8;
     max-width: 100%;
   }
+  
   
   .hero-content {
     padding: 0 1rem;
