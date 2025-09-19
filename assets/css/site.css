@@ -1846,30 +1846,56 @@ img, video {
   position: fixed;
   inset: 0;
   background: #000;
-  opacity: 1;
-  transition: opacity 2.0s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   z-index: 9999;
+  opacity: 1;
+  transition: opacity 2.4s ease;
 }
 
+#intro-phrase, #intro-logo {
+  color: #fff;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 2.0s ease;
+}
+
+#intro-phrase {
+  font-family: 'KouzanBrushFont', 'AoyagiKouzanFont', 'GenEiGyoSho', serif;
+  color: #fff;
+  font-size: clamp(24px, 3.5vw, 48px);
+  letter-spacing: 0.1em;
+  text-align: center;
+  white-space: nowrap;         /* 改行を防止 */
+  text-shadow: 0 2px 14px rgba(0,0,0,.55);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 2.0s ease;
+}
+
+#intro-logo {
+  max-width: 280px;
+  margin-top: 20px;
+}
+
+/* 動画 */
 .hero-video {
   opacity: 0;
-  transition: opacity 2.4s ease 0.6s; /* 遅延を0.6sに延ばす */
+  transition: opacity 3.4s ease 0.2s;
 }
-
-/* ロード完了後の状態 */
-body.is-loaded #blackout {
-  opacity: 0;
-  pointer-events: none;
-}
-
-body.is-loaded .hero-video {
-  opacity: 1;
+body.video-start .hero-video { 
+  opacity: 1; 
 }
 
 /* 低速端末用に少し長めの余韻 */
 @media (min-width: 768px) {
   .hero-video {
-    transition: opacity 2.6s ease 0.7s;
+    transition: opacity 3.6s ease 0.3s;
   }
 }
 
