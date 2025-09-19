@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="lang-ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,7 @@
       display:flex; flex-direction:column; gap:10px;
       text-align:center;
     ">
-      <a href="/ja/index.html" aria-label="日本語" style="
+      <a href="/ja/index.html" class="lang-btn" data-lang="ja" aria-label="日本語" style="
         font:600 14px/1 'Noto Serif JP', serif;
         color:#cccccc; text-decoration:none;
         transition:all 0.3s ease;
@@ -44,7 +44,7 @@
          onmouseout="this.style.color='#cccccc';this.style.transform='scale(1)';">
         JP
       </a>
-      <a href="/index.html" aria-label="English" style="
+      <a href="/index.html" class="lang-btn" data-lang="en" aria-label="English" style="
         font:600 14px/1 'Noto Serif JP', serif;
         color:#cccccc; text-decoration:none;
         transition:all 0.3s ease;
@@ -52,7 +52,7 @@
          onmouseout="this.style.color='#cccccc';this.style.transform='scale(1)';">
         EN
       </a>
-      <a href="/zh-tw/index.html" aria-label="繁體中文" style="
+      <a href="/zh-tw/index.html" class="lang-btn" data-lang="zh-tw" aria-label="繁體中文" style="
         font:600 14px/1 'Noto Serif JP', serif;
         color:#cccccc; text-decoration:none;
         transition:all 0.3s ease;
@@ -60,7 +60,7 @@
          onmouseout="this.style.color='#cccccc';this.style.transform='scale(1)';">
         繁
       </a>
-      <a href="/zh-cn/index.html" aria-label="简体中文" style="
+      <a href="/zh-cn/index.html" class="lang-btn" data-lang="zh-cn" aria-label="简体中文" style="
         font:600 14px/1 'Noto Serif JP', serif;
         color:#cccccc; text-decoration:none;
         transition:all 0.3s ease;
@@ -431,6 +431,7 @@
     <!-- Video Controls Script -->
     <script src="/assets/js/video-controls.js" defer></script>
     <script src="/assets/js/blackout-animation.js" defer></script>
+    <script src="/assets/js/route-animation.js" defer></script>
     
     <!-- Mobile Navigation Script -->
     <script src="/assets/js/mobile-nav.js" defer></script>

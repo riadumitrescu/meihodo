@@ -1862,20 +1862,45 @@ img, video {
   transition: opacity 2.0s ease;
 }
 
+/* 共通（PCは横書き） */
+#intro-phrase, #route-phrase {
+  font-size: clamp(18px, 4vw, 36px);
+  letter-spacing: 0.1em;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 2px 14px rgba(0,0,0,.55);
+}
+
 #intro-phrase {
   font-family: 'KouzanBrushFont', 'AoyagiKouzanFont', 'GenEiGyoSho', serif;
   color: #fff;
-  font-size: clamp(24px, 3.5vw, 48px);
-  letter-spacing: 0.1em;
-  text-align: center;
-  white-space: nowrap;         /* 改行を防止 */
-  text-shadow: 0 2px 14px rgba(0,0,0,.55);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 2.0s ease;
+}
+
+/* モバイル時：日本語＆中国語は縦書き */
+@media (max-width: 768px) {
+  body.lang-ja #intro-phrase,
+  body.lang-zh-cn #intro-phrase,
+  body.lang-zh-tw #intro-phrase,
+  body.lang-ja #route-phrase,
+  body.lang-zh-cn #route-phrase,
+  body.lang-zh-tw #route-phrase {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    white-space: normal;
+    line-height: 1.6;
+  }
+  /* 英語は常に横書き（変更なし） */
+  body.lang-en #intro-phrase,
+  body.lang-en #route-phrase {
+    writing-mode: horizontal-tb;
+    white-space: normal;
+  }
 }
 
 #intro-logo {
@@ -1913,6 +1938,49 @@ body.video-start .hero-video {
   
   .hero-video {
     opacity: 1;
+  }
+}
+
+/* ルーティング時の一時オーバーレイ。初回の #blackout と同等だがIDを分ける */
+#route-blackout {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 2.0s ease;  /* フェード時間を長めに */
+}
+
+#route-phrase, #route-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 2.0s ease;  /* ロゴもゆっくり消える */
+}
+
+/* 白文字コピー */
+#route-phrase {
+  color: #fff;
+  font-family: 'KouzanBrushFont','AoyagiKouzanFont','GenEiGyoSho',serif;
+}
+
+/* ロゴ */
+#route-logo {
+  max-width: 280px;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,.35));
+}
+
+
+/* 動きを苦手とするユーザー配慮（ルーティング用） */
+@media (prefers-reduced-motion: reduce) {
+  #route-phrase, #route-logo { 
+    transition: none !important; 
   }
 }
 
