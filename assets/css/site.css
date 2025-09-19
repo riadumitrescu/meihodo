@@ -1862,13 +1862,13 @@ img, video {
   transition: opacity 2.0s ease;
 }
 
-/* 共通（PCは横書き） */
+/* 共通：デフォルトは横書き */
 #intro-phrase, #route-phrase {
   font-size: clamp(18px, 4vw, 36px);
   letter-spacing: 0.1em;
   text-align: center;
-  white-space: nowrap;
   text-shadow: 0 2px 14px rgba(0,0,0,.55);
+  white-space: normal;    /* nowrapをやめて折り返し可能に */
 }
 
 #intro-phrase {
@@ -1882,24 +1882,23 @@ img, video {
   transition: opacity 2.0s ease;
 }
 
-/* モバイル時：日本語＆中国語は縦書き */
+/* モバイル時の縦書き（日本語・中国語のみ） */
 @media (max-width: 768px) {
-  body.lang-ja #intro-phrase,
-  body.lang-zh-cn #intro-phrase,
-  body.lang-zh-tw #intro-phrase,
-  body.lang-ja #route-phrase,
-  body.lang-zh-cn #route-phrase,
-  body.lang-zh-tw #route-phrase {
+  html[lang="ja"] #intro-phrase,
+  html[lang="zh-cn"] #intro-phrase,
+  html[lang="zh-tw"] #intro-phrase,
+  html[lang="ja"] #route-phrase,
+  html[lang="zh-cn"] #route-phrase,
+  html[lang="zh-tw"] #route-phrase {
     writing-mode: vertical-rl;
     text-orientation: upright;
-    white-space: normal;
     line-height: 1.6;
   }
-  /* 英語は常に横書き（変更なし） */
-  body.lang-en #intro-phrase,
-  body.lang-en #route-phrase {
+
+  /* 英語は常に横書き */
+  html[lang="en"] #intro-phrase,
+  html[lang="en"] #route-phrase {
     writing-mode: horizontal-tb;
-    white-space: normal;
   }
 }
 
