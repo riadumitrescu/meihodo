@@ -1311,6 +1311,7 @@ img, video {
 
 .catchphrase-column {
   text-align: left;
+  padding: 0 1.5rem;
 }
 
 .catchphrase {
@@ -2406,6 +2407,10 @@ footer {
     padding: 0 2rem;
   }
   
+  .catchphrase-column {
+    padding: 0 1.2rem;
+  }
+  
   .catchphrase-line {
     font-size: clamp(1.3rem, 4vw, 1.6rem);
     line-height: 1.7;
@@ -2467,6 +2472,10 @@ footer {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 0 1.5rem;
+  }
+  
+  .catchphrase-column {
+    padding: 0 1rem;
   }
   
   .catchphrase-line {
