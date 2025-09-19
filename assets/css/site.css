@@ -1862,18 +1862,13 @@ img, video {
   transition: opacity 2.0s ease;
 }
 
-/* 共通：デフォルトは横書き */
-#intro-phrase, #route-phrase {
-  font-size: clamp(18px, 4vw, 36px);
-  letter-spacing: 0.1em;
-  text-align: center;
-  text-shadow: 0 2px 14px rgba(0,0,0,.55);
-  white-space: normal;    /* nowrapをやめて折り返し可能に */
-}
-
 #intro-phrase {
   font-family: 'KouzanBrushFont', 'AoyagiKouzanFont', 'GenEiGyoSho', serif;
   color: #fff;
+  font-size: clamp(18px, 4vw, 36px);
+  letter-spacing: 0.15em;
+  text-align: center;
+  text-shadow: 0 2px 14px rgba(0,0,0,.55);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1882,23 +1877,13 @@ img, video {
   transition: opacity 2.0s ease;
 }
 
-/* モバイル時の縦書き（日本語・中国語のみ） */
+/* モバイル（768px以下）のみ縦書き */
 @media (max-width: 768px) {
-  html[lang="ja"] #intro-phrase,
-  html[lang="zh-cn"] #intro-phrase,
-  html[lang="zh-tw"] #intro-phrase,
-  html[lang="ja"] #route-phrase,
-  html[lang="zh-cn"] #route-phrase,
-  html[lang="zh-tw"] #route-phrase {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+  #intro-phrase {
+    writing-mode: vertical-rl;   /* 縦書き */
+    text-orientation: upright;   /* 日本語を縦書きで自然に */
+    white-space: normal;         /* 縦に折り返し可能 */
     line-height: 1.6;
-  }
-
-  /* 英語は常に横書き */
-  html[lang="en"] #intro-phrase,
-  html[lang="en"] #route-phrase {
-    writing-mode: horizontal-tb;
   }
 }
 
@@ -1966,6 +1951,9 @@ body.video-start .hero-video {
 /* 白文字コピー */
 #route-phrase {
   color: #fff;
+  font-size: clamp(18px, 3.5vw, 48px);
+  letter-spacing: 0.1em;
+  text-shadow: 0 2px 14px rgba(0,0,0,.55);
   font-family: 'KouzanBrushFont','AoyagiKouzanFont','GenEiGyoSho',serif;
 }
 
@@ -1975,6 +1963,15 @@ body.video-start .hero-video {
   filter: drop-shadow(0 2px 10px rgba(0,0,0,.35));
 }
 
+/* モバイルだけ縦書きにしたい場合（任意・以前の指定を踏襲） */
+@media (max-width: 768px) {
+  .vertical-mobile #route-phrase {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    white-space: normal;
+    line-height: 1.6;
+  }
+}
 
 /* 動きを苦手とするユーザー配慮（ルーティング用） */
 @media (prefers-reduced-motion: reduce) {
