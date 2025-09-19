@@ -18,6 +18,90 @@
     <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
+    <!-- Fixed Language Switcher -->
+    <nav aria-label="Language" style="
+      position:fixed; right:20px; bottom:20px; z-index:9999;
+      display:flex; flex-direction:column; gap:10px;
+      text-align:center;
+    ">
+      <a href="/ja/access.html" aria-label="日本語" style="
+        font:600 14px/1 'Noto Serif JP', serif;
+        color:#fff; text-decoration:none;
+        transition:all 0.3s ease;
+        opacity:0.7;
+      " onmouseover="this.style.opacity='1';this.style.transform='scale(1.1)';"
+         onmouseout="this.style.opacity='0.7';this.style.transform='scale(1)';">
+        JP
+      </a>
+      <a href="/access.html" aria-label="English" style="
+        font:600 14px/1 'Noto Serif JP', serif;
+        color:#fff; text-decoration:none;
+        transition:all 0.3s ease;
+        opacity:1;
+      " onmouseover="this.style.opacity='1';this.style.transform='scale(1.1)';"
+         onmouseout="this.style.opacity='0.7';this.style.transform='scale(1)';">
+        EN
+      </a>
+      <a href="/zh-tw/access.html" aria-label="繁體中文" style="
+        font:600 14px/1 'Noto Serif JP', serif;
+        color:#fff; text-decoration:none;
+        transition:all 0.3s ease;
+        opacity:0.7;
+      " onmouseover="this.style.opacity='1';this.style.transform='scale(1.1)';"
+         onmouseout="this.style.opacity='0.7';this.style.transform='scale(1)';">
+        繁
+      </a>
+      <a href="/zh-cn/access.html" aria-label="简体中文" style="
+        font:600 14px/1 'Noto Serif JP', serif;
+        color:#fff; text-decoration:none;
+        transition:all 0.3s ease;
+        opacity:0.7;
+      " onmouseover="this.style.opacity='1';this.style.transform='scale(1.1)';"
+         onmouseout="this.style.opacity='0.7';this.style.transform='scale(1)';">
+        简
+      </a>
+      
+      <!-- Navigation Buttons -->
+      <a href="/accommodations/index.html" aria-label="ACCOMMODATIONS" style="
+        width:40px; height:100px;
+        display:flex; align-items:center; justify-content:center;
+        border:2px solid #5c4033; border-radius:20px;
+        font:600 8px/1 'Noto Serif JP', serif;
+        color:#5c4033; text-decoration:none;
+        background:#fdfaf6;
+        box-shadow:0 2px 6px rgba(0,0,0,0.2);
+        transition:all 0.3s ease;
+        writing-mode:vertical-rl; text-orientation:mixed;
+        letter-spacing:0.5px;
+        position:relative;
+        overflow:hidden;
+        margin-top:15px;
+        text-align:center;
+        word-break:break-all;
+      " onmouseover="this.style.background='#5c4033';this.style.color='#fff';this.style.transform='scale(1.05)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.3)';"
+         onmouseout="this.style.background='#fdfaf6';this.style.color='#5c4033';this.style.transform='scale(1)';this.style.boxShadow='0 2px 6px rgba(0,0,0,0.2)';">
+        ACCOMMODATIONS
+      </a>
+      <a href="/experiences/index.html" aria-label="EXPERIENCES" style="
+        width:40px; height:100px;
+        display:flex; align-items:center; justify-content:center;
+        border:2px solid #5c4033; border-radius:20px;
+        font:600 8px/1 'Noto Serif JP', serif;
+        color:#5c4033; text-decoration:none;
+        background:#fdfaf6;
+        box-shadow:0 2px 6px rgba(0,0,0,0.2);
+        transition:all 0.3s ease;
+        writing-mode:vertical-rl; text-orientation:mixed;
+        letter-spacing:0.5px;
+        position:relative;
+        overflow:hidden;
+        text-align:center;
+        word-break:break-all;
+      " onmouseover="this.style.background='#5c4033';this.style.color='#fff';this.style.transform='scale(1.05)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.3)';"
+         onmouseout="this.style.background='#fdfaf6';this.style.color='#5c4033';this.style.transform='scale(1)';this.style.boxShadow='0 2px 6px rgba(0,0,0,0.2)';">
+        EXPERIENCES
+      </a>
+    </nav>
     <!-- Header -->
     <header class="header">
         <div class="container">
