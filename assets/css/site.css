@@ -1292,6 +1292,66 @@ img, video {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* Video Caption Section */
+.video-caption-section {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, #fefefe, #f8f8f8);
+  position: relative;
+}
+
+.video-caption-grid {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 3rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.catchphrase-column {
+  text-align: left;
+}
+
+.catchphrase {
+  margin-bottom: 0;
+}
+
+.catchphrase-line {
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.8;
+  color: var(--ink);
+  margin: 0.6rem 0;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: left;
+}
+
+.description-column {
+  text-align: left;
+}
+
+.description {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.1rem;
+  line-height: 2;
+  color: var(--muted);
+  text-align: left;
+  max-width: 90%;
+}
+
+.description p {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.description p:last-child {
+  margin-bottom: 0;
+}
+
 /* Hero Text Section */
 .hero-text-section {
   padding: 5rem 0;
@@ -2336,6 +2396,28 @@ footer {
     padding-top: 0;
   }
   
+  .video-caption-section {
+    padding: 4rem 0;
+  }
+  
+  .video-caption-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 0 2rem;
+  }
+  
+  .catchphrase-line {
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+    line-height: 1.7;
+    margin: 0.5rem 0;
+  }
+  
+  .description {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    max-width: 100%;
+  }
+  
   .section {
     padding: 3rem 0;
   }
@@ -2375,6 +2457,28 @@ footer {
     max-height: 400px;
     margin-top: 0;
     padding-top: 0;
+  }
+  
+  .video-caption-section {
+    padding: 3rem 0;
+  }
+  
+  .video-caption-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+  
+  .catchphrase-line {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    line-height: 1.6;
+    margin: 0.4rem 0;
+  }
+  
+  .description {
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 100%;
   }
   
   .hero-content {
