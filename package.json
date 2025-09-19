@@ -1,0 +1,19 @@
+{
+  "name": "meihodo-website",
+  "version": "1.0.0",
+  "description": "MEIHODO - Authentic Samurai Experience and Japanese Culture in Aso",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site - no build step required'",
+    "dev": "echo 'Static site - use a local server'"
+  },
+  "keywords": [
+    "meihodo",
+    "samurai",
+    "japanese-culture",
+    "aso",
+    "kumamoto"
+  ],
+  "author": "MEIHODO",
+  "license": "MIT"
+}
