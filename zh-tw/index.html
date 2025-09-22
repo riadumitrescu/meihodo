@@ -18,15 +18,17 @@
     <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-    <!-- Fixed Navigation Rail -->
-    <nav aria-label="Main Navigation" style="
-      position:fixed; right:20px; top:50%; transform:translateY(-50%);
-      z-index:9998; display:flex; flex-direction:column; gap:15px;
+    <!-- Fixed Navigation and Language Switcher -->
+    <nav aria-label="Navigation and Language" style="
+      position:fixed; right:20px; bottom:20px; z-index:9999;
+      display:flex; flex-direction:column; gap:15px;
+      text-align:center;
     ">
+      <!-- Navigation Buttons -->
       <a href="/zh-tw/accommodations/index.html" aria-label="住宿一覽" style="
-        width:80px; height:80px;
+        width:60px; height:100px;
         display:flex; align-items:center; justify-content:center;
-        border:2px solid #5c4033; border-radius:8px;
+        border:2px solid #5c4033; border-radius:50px;
         font:600 14px/1 'Noto Serif JP', serif;
         color:#5c4033; text-decoration:none;
         background:#fdfaf6;
@@ -34,14 +36,15 @@
         transition:all 0.3s ease;
         writing-mode:vertical-rl; text-orientation:upright;
         letter-spacing:2px;
+        margin:0 auto;
       " onmouseover="this.style.background='#5c4033';this.style.color='#fff';this.style.transform='scale(1.05)';"
          onmouseout="this.style.background='#fdfaf6';this.style.color='#5c4033';this.style.transform='scale(1)';">
         住宿一覽
       </a>
       <a href="/zh-tw/experiences/index.html" aria-label="體驗一覽" style="
-        width:80px; height:80px;
+        width:60px; height:100px;
         display:flex; align-items:center; justify-content:center;
-        border:2px solid #5c4033; border-radius:8px;
+        border:2px solid #5c4033; border-radius:50px;
         font:600 14px/1 'Noto Serif JP', serif;
         color:#5c4033; text-decoration:none;
         background:#fdfaf6;
@@ -49,67 +52,51 @@
         transition:all 0.3s ease;
         writing-mode:vertical-rl; text-orientation:upright;
         letter-spacing:2px;
+        margin:0 auto;
       " onmouseover="this.style.background='#5c4033';this.style.color='#fff';this.style.transform='scale(1.05)';"
          onmouseout="this.style.background='#fdfaf6';this.style.color='#5c4033';this.style.transform='scale(1)';">
         體驗一覽
       </a>
-    </nav>
-
-    <!-- Fixed Language Switcher -->
-    <nav aria-label="Language" style="
-      position:fixed; right:20px; bottom:20px; z-index:9999;
-      display:flex; flex-direction:column; gap:10px;
-    ">
+      
+      <!-- Language Switcher -->
       <a href="/ja/index.html" aria-label="日本語" style="
-        width:70px; height:34px;
-        display:flex; align-items:center; justify-content:center;
-        border:1px solid #5c4033; border-radius:9999px;
-        font:600 13px/1 'Noto Serif JP', serif;
+        display:block;
+        font:600 16px/1 'Noto Serif JP', serif;
         color:#5c4033; text-decoration:none;
-        background:#fdfaf6;
-        box-shadow:0 1px 2px rgba(0,0,0,0.15);
         transition:all 0.3s ease;
-      " onmouseover="this.style.background='#5c4033';this.style.color='#fff';"
-         onmouseout="this.style.background='#fdfaf6';this.style.color='#5c4033';">
+        padding:5px 0;
+      " onmouseover="this.style.color='#8b4513';this.style.transform='scale(1.1)';"
+         onmouseout="this.style.color='#5c4033';this.style.transform='scale(1)';">
         JP
       </a>
       <a href="/index.html" aria-label="English" style="
-        width:70px; height:34px;
-        display:flex; align-items:center; justify-content:center;
-        border:1px solid #5c4033; border-radius:9999px;
-        font:600 13px/1 'Noto Serif JP', serif;
+        display:block;
+        font:600 16px/1 'Noto Serif JP', serif;
         color:#5c4033; text-decoration:none;
-        background:#fdfaf6;
-        box-shadow:0 1px 2px rgba(0,0,0,0.15);
         transition:all 0.3s ease;
-      " onmouseover="this.style.background='#5c4033';this.style.color='#fff';"
-         onmouseout="this.style.background='#fdfaf6';this.style.color='#5c4033';">
+        padding:5px 0;
+      " onmouseover="this.style.color='#8b4513';this.style.transform='scale(1.1)';"
+         onmouseout="this.style.color='#5c4033';this.style.transform='scale(1)';">
         EN
       </a>
       <a href="/zh-tw/index.html" aria-label="繁體中文" style="
-        width:70px; height:34px;
-        display:flex; align-items:center; justify-content:center;
-        border:1px solid #5c4033; border-radius:9999px;
-        font:600 13px/1 'Noto Serif JP', serif;
+        display:block;
+        font:600 16px/1 'Noto Serif JP', serif;
         color:#5c4033; text-decoration:none;
-        background:#fdfaf6;
-        box-shadow:0 1px 2px rgba(0,0,0,0.15);
         transition:all 0.3s ease;
-      " onmouseover="this.style.background='#5c4033';this.style.color='#fff';"
-         onmouseout="this.style.background='#fdfaf6';this.style.color='#5c4033';">
+        padding:5px 0;
+      " onmouseover="this.style.color='#8b4513';this.style.transform='scale(1.1)';"
+         onmouseout="this.style.color='#5c4033';this.style.transform='scale(1)';">
         繁
       </a>
       <a href="/zh-cn/index.html" aria-label="简体中文" style="
-        width:70px; height:34px;
-        display:flex; align-items:center; justify-content:center;
-        border:1px solid #5c4033; border-radius:9999px;
-        font:600 13px/1 'Noto Serif JP', serif;
+        display:block;
+        font:600 16px/1 'Noto Serif JP', serif;
         color:#5c4033; text-decoration:none;
-        background:#fdfaf6;
-        box-shadow:0 1px 2px rgba(0,0,0,0.15);
         transition:all 0.3s ease;
-      " onmouseover="this.style.background='#5c4033';this.style.color='#fff';"
-         onmouseout="this.style.background='#fdfaf6';this.style.color='#5c4033';">
+        padding:5px 0;
+      " onmouseover="this.style.color='#8b4513';this.style.transform='scale(1.1)';"
+         onmouseout="this.style.color='#5c4033';this.style.transform='scale(1)';">
         简
       </a>
     </nav>
